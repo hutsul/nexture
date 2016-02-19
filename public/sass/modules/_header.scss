@@ -1,1 +1,255 @@
 // Header block style
+
+.main-header {
+  position: relative;
+  .logo_container {
+    padding-top: 8px;
+  }
+  .top_navigation {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    .navbar-toggle {
+      float: none;
+      color: $white;
+      font-size: 20px;
+      margin: 0;
+      margin-top: 5px;
+    }
+    .navbar-collapse {
+      border-top: none;
+      box-shadow: none;
+    }
+  }
+  .navbar-nav {
+    a {
+      color: $white;
+      background: none !important;
+      padding: 5px;
+      border-bottom: 1px solid transparent;
+      &:hover {
+        color: $navLinkActive;
+      }
+    }
+    li.active {
+      a {
+        color: $navLinkActive;
+        border-bottom: 1px solid;
+      }
+    }
+  }
+  .user_social {
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .user_box {
+    position: relative;
+    padding: 4px 22px 4px 10px;
+    border: 1px solid $green1;
+    max-width: 160px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 10px;
+    cursor: pointer;
+    &:after {
+      position: absolute;
+      right: 7px;
+      top: 50%;
+      margin-top: -2px;
+      content: '';
+      width: 0%;
+      height: 0;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      border-top: 5px solid $white;
+    }
+    .img_container, .body_container {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .body_container {
+      padding-left: 10px;
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 72px;
+        margin-bottom: 0;
+        color: $white;
+        font-size: 18px;
+        margin-right: 5px;
+      }
+    }
+    img {
+      width: 20px;
+      height: 20px;
+    }
+    .drop_social {
+      position: absolute;
+      top: 105%;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      margin-left: 0;
+      text-align: center;
+      display: none;
+      a {
+        margin: 0 10px;
+      }
+    }
+    &.open {
+      .drop_social {
+        display: block;
+      }
+    }
+  }
+  .social, .drop_social {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 13px;
+    .social_facebook {
+      background: $facebookBg;
+    }
+    .social_twitter {
+      background: $twitterBg;
+    }
+    a {
+      color: $white;
+      display: inline-block;
+      width: 27px;
+      height: 27px;
+      text-align: center;
+      font-size: 14px;
+      border-radius: 50%;
+      margin-left: 7px;
+      line-height: 27px;
+      &:hover {
+        opacity: .9;
+      }
+    }
+  }
+  .social {
+    display: none;
+  }
+  .drop_social {
+    display: none;
+  }
+}
+.header_slider {
+  .item {
+    height: 500px;
+    & > img {
+      max-width: 767px !important;
+      height: 100%;
+    }
+  }
+  .carousel-caption {
+    bottom: 50%;
+    margin-bottom: -90px;
+    text-shadow: none;
+    img {
+      max-width: 200px;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 15px;
+    }
+  }
+  .carousel-control {
+    display: none;
+  }
+  .carousel-indicators {
+    li {
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+    }
+  }
+}
+
+@media screen and (min-width: $smallScreen) {
+  .main-header {
+    .top_navigation {
+      padding-top: 25px;
+    }
+    .user_social {
+      text-align: left;
+      position: static;
+    }
+    .user_box {
+      margin-top: 0;
+      max-width: 130px;
+      padding: 4px 10px;
+      &:after {
+        content: none;
+      }
+      &.open {
+        .drop_social {
+          display: none;
+        }
+      }
+    }
+    .social {
+      display: inline-block;
+    }
+  }
+  .navbar-nav {
+    li + li {
+      margin-left: 5px;
+    }
+  }
+  .header_slider {
+    .item {
+      height: auto;
+      & > img {
+        width: 100%;
+        max-width: 100% !important;
+        height: auto;
+      }
+    }
+    .carousel-caption {
+      margin-bottom: -105px;
+      p {
+        margin-top: 15px;
+        font-size: 25px;
+      }
+      img {
+        max-width: 410px;
+      }
+    }
+    .carousel-control {
+      display: block;
+      background: none;
+      opacity: 1;
+      height: 40px;
+      width: 40px;
+      top: 50%;
+      margin-top: -20px;
+      i {
+        font-size: 40px;
+      }
+    }
+    .carousel-indicators {
+      li {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $mediumScreen) {
+  .main-header {
+    .navbar-nav {
+      li + li {
+        margin-left: 35px;
+      }
+    }
+    .social {
+      margin-left: 5px;
+    }
+  }
+}
