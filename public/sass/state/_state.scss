@@ -1,0 +1,90 @@
+// Classes state (for JS). Can use "!important"
+
+.hide {
+  display: none !important;
+}
+.hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+.show {
+  display: block !important;
+}
+.align {
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-justify {
+    text-align: justify;
+  }
+}
+.float {
+  &-left {
+    float: left !important;
+  }
+  &-right {
+    float: right !important;
+  }
+}
+.overflow {
+  &-hidden {
+    overflow: hidden !important;
+  }
+  &-auto {
+    overflow: auto !important;
+  }
+}
+.no {
+  &-padding {
+    padding: 0 !important;
+    @media (max-width: $smallScreenDown) {
+      &-xs {
+        padding: 0 !important;
+      }
+    }
+    @media (min-width: $smallScreen) and (max-width: $mediumScreenDown) {
+      &-s {
+        padding: 0 !important;
+      }
+    }
+    @media (min-width: $mediumScreen) and (max-width: $largeScreenDown) {
+      &-m {
+        padding: 0 !important;
+      }
+    }
+    @media (min-width: $largeScreen) {
+      &-l {
+        padding: 0 !important;
+      }
+    }
+  }
+  &-margin {
+    margin: 0 !important;
+    @media (max-width: $smallScreenDown) {
+      &-xs {
+        margin: 0 !important;
+      }
+    }
+    @media (min-width: $smallScreen) and (max-width: $mediumScreenDown) {
+      &-s {
+        margin: 0 !important;
+      }
+    }
+    @media (min-width: $mediumScreen) and (max-width: $largeScreenDown) {
+      &-m {
+        margin: 0 !important;
+      }
+    }
+    @media (min-width: $largeScreen) {
+      &-l {
+        margin: 0 !important;
+      }
+    }
+  }
+}

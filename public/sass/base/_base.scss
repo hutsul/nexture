@@ -1,0 +1,65 @@
+// Base style (tag only)
+* {
+  @include border-box();
+  &:before, &:after {
+    @include border-box();
+  }
+}
+html, body {
+  @extend %noIndent;
+}
+body {
+  background: $baseBgColor;
+  color: $baseTextColor;
+}
+a {
+  background-color: transparent;
+  color: $baseLinkColor;
+
+  &:hover, &:focus, &:active {
+    color: darken($baseLinkColor, 10%);
+    outline: 0;
+  }
+}
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+p {
+  margin-bottom: 20px;
+}
+
+// disable placeholder - onfocus/onblur effect
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+textarea {
+  &:focus {
+    &::-webkit-input-placeholder {color: transparent !important;}
+    &::-moz-placeholder          {color: transparent !important;;}
+    &:-moz-placeholder           {color: transparent !important;;}
+    &:-ms-input-placeholder      {color: transparent !important;;}
+  }
+}
+
+.footerFixed {
+  min-height: 100%;
+  position: relative;
+
+  body {
+    min-height: 1px;
+    height: 100%;
+    margin-bottom: calc(#{$footerHeight} + 20px);
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: $footerHeight;
+    width: 100%;
+  }
+}

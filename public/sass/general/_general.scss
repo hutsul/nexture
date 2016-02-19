@@ -1,0 +1,25 @@
+// General classes for project
+
+.wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  &-header { }
+
+  &-content { }
+
+  &-footer { }
+}
+
+.section {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  &-title {
+    font-family: $extraFontFamily;
+    @include rem(font-size, 34px);
+  }
+}

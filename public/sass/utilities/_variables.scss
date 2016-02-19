@@ -1,0 +1,91 @@
+// General Fonts variables
+$serif: sans-serif;
+$fontPath: '../fonts/';
+
+// Fonts variables for project
+$baseFontPath: 'raleway/';
+$latoFontPath: 'lato/';
+
+$baseFontFile: (
+    1: 'Raleway'
+);
+$baseFontName: (
+    1: 'Raleway'
+);
+$baseFont: (
+    'regular':  'Raleway'
+);
+
+
+$latoFontFile: (
+    1: 'Lato-Regular'
+);
+$latoFontName: (
+    1: 'Lato Regular'
+);
+$latoFont: (
+    'regular':  'Lato Regular',
+);
+
+// All fonts array
+$fonts: (
+    "baseFont": $baseFont,
+    "latoFont": $latoFont
+);
+
+// usage: font("type_of_font", "name_of_font")
+// to avoid to repeating map-get($fonts, ...)
+
+@function font($font, $type) {
+  @if map-has-key($fonts, $font) {
+    $curr_font: map-get($fonts, $font);
+    @if map-has-key($curr_font, $type) {
+      @return map-get($curr_font, $type);
+    }
+  }
+  @warn "Unknown `#{name}` in $fonts.";
+  @return null;
+}
+
+// Fonts family variables
+$baseFontFamily:  font("baseFont", "regular"), $serif !default;
+$latoFontFamily: font("latoFont", "regular"), $serif;
+
+// Grid vars
+$numCols: 12 !default;
+$gutterWidth: 30px !default;
+
+$extraSmallScreen: 480px !default;
+$smallScreen:      768px !default;
+$mediumScreen:     992px !default;
+$largeScreen:      1200px !default;
+
+// Grid vars -1
+$extraSmallScreenDown: 479px;
+$smallScreenDown:      767px;
+$mediumScreenDown:     993px;
+$largeScreenDown:      1201px;
+
+// Grid vars +1
+$extraSmallScreenUp: 481px;
+$smallScreenUp:      769px;
+$mediumScreenUp:     993px;
+$largeScreenUp:      1201px;
+
+/*** Typography ***/
+$fontSizeH1: 36px !default;
+$fontSizeH2: 30px !default;
+$fontSizeH3: 24px !default;
+$fontSizeH4: 16px !default;
+$fontSizeH5: 14px !default;
+$fontSizeH6: 12px !default;
+
+$fontMarginH1: 10px 0 15px !default;
+$fontMarginH2: 10px 0 15px !default;
+$fontMarginH3: 10px 0 !default;
+$fontMarginH4: 15px 0 !default;
+$fontMarginH5: 20px 0 !default;
+$fontMarginH6: 25px 0 !default;
+
+// Footer
+$footerHeight: 100px !default;

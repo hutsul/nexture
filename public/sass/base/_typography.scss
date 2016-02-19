@@ -1,0 +1,46 @@
+// Typography style
+html {
+  font-size: 75%;
+  @media (min-width: $mediumScreen) {
+    font-size: 87.5%;
+  }
+  @media (min-width: $largeScreen) {
+    font-size: 100%;
+  }
+}
+body {
+  font-family: $baseFontFamily
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $baseFontFamily;
+}
+
+h1 {
+  @include rem(font-size, $fontSizeH1);
+  @include rem(margin, $fontMarginH1);
+}
+h2 {
+  @include rem(font-size, $fontSizeH2);
+  @include rem(margin, $fontMarginH2);
+}
+h3 {
+  @include rem(font-size, $fontSizeH3);
+  @include rem(margin, $fontMarginH3);
+}
+h4 {
+  @include rem(font-size, $fontSizeH4);
+  @include rem(margin, $fontMarginH4);
+}
+h5 {
+  @include rem(font-size, $fontSizeH5);
+  @include rem(margin, $fontMarginH5);
+}
+h6 {
+  @include rem(font-size, $fontSizeH6);
+  @include rem(margin, $fontMarginH6);
+}

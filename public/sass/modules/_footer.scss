@@ -1,0 +1,54 @@
+// Footer block
+.footer {
+	//position: absolute;
+	//bottom: 0;
+	//left: 0;
+	//right: 0;
+	text-align: left;
+	background-color: $footerBgColor;
+	color:$footerColor;
+
+	&-col {
+		display: inline-block;
+		text-align: left;
+		margin-top: 50px;
+
+		&:last-child {
+			margin: 50px 0;
+		}
+	}
+	&-col-title {
+		margin-bottom: 40px;
+		font-size: 20px;
+	}
+	&-list {
+		list-style-type: none;
+		padding-left: 0;
+	}
+	&-sub-list {
+		padding-left: 20px;
+	}
+	&-list-item {
+		font-size: 15px;
+		margin:0 0 16px;
+	}
+	&-bottom {
+		background-color: $footerBottomBgColor;
+		padding: 30px 0 0 0;
+	}
+	&-bottom-txt, &-bottom-copyright {
+		font-size: 15px;
+		margin-bottom: 20px;
+		text-align:right;
+	}
+}
+
+@media screen and (min-width: $smallScreen) {
+	.footer {
+		text-align: center;
+
+		&-bottom-txt{
+			text-align:left;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+// Fonts include
+$baseFontFirst: 1;
+$baseFontCount: 1;
+
+$latoFontFirst: 1;
+$latoFontCount: 1;
+
+@for $i from $baseFontFirst through $baseFontCount {
+  @font-face {
+    font-family: map-get($baseFontName, $i);
+    src: url('#{$fontPath}#{$baseFontPath}#{map-get($baseFontFile, $i)}.eot');
+    src: url('#{$fontPath}#{$baseFontPath}#{map-get($baseFontFile, $i)}.eot?#iefix') format('embedded-opentype'),
+    url('#{$fontPath}#{$baseFontPath}#{map-get($baseFontFile, $i)}.woff2') format('woff2'),
+    url('#{$fontPath}#{$baseFontPath}#{map-get($baseFontFile, $i)}.woff') format('woff'),
+    url('#{$fontPath}#{$baseFontPath}#{map-get($baseFontFile, $i)}.ttf') format('truetype');
+  }
+}
+@for $i from $latoFontFirst through $latoFontCount {
+  @font-face {
+    font-family: map-get($latoFontName, $i);
+    src: url('#{$fontPath}#{$latoFontPath}#{map-get($latoFontFile, $i)}.eot');
+    src: url('#{$fontPath}#{$latoFontPath}#{map-get($latoFontFile, $i)}.eot?#iefix') format('embedded-opentype'),
+    url('#{$fontPath}#{$latoFontPath}#{map-get($latoFontFile, $i)}.woff2') format('woff2'),
+    url('#{$fontPath}#{$latoFontPath}#{map-get($latoFontFile, $i)}.woff') format('woff'),
+    url('#{$fontPath}#{$latoFontPath}#{map-get($latoFontFile, $i)}.ttf') format('truetype');
+  }
+}

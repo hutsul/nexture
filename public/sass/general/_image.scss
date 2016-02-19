@@ -1,0 +1,30 @@
+// Images style
+.img {
+
+  &-cover {
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include background-size(cover);
+  }
+
+  &-contain {
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include background-size(contain);
+  }
+
+  &-rounded {
+    @include border-radius(4px);
+  }
+
+  &-circle {
+    @include border-radius(50%);
+  }
+
+  &-thumb {
+    padding: 4px;
+    border: 1px solid $baseBorderColor;
+    background-color: $baseBgColor;
+    @include border-radius(4px);
+  }
+}

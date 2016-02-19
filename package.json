@@ -1,0 +1,27 @@
+{
+  "name": "html_css_template",
+  "version": "0.0.5",
+  "description": "template for new projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanKhartov/smacss.git"
+  },
+  "author": "IvanKhartov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IvanKhartov/smacss/issues"
+  },
+  "homepage": "https://github.com/IvanKhartov/smacss#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-jshint": "^0.12.0",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "jshint-stylish": "^2.1.0"
+  }
+}
