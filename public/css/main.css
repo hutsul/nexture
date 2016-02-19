@@ -2229,6 +2229,28 @@ h6 {
 /**
   * General
   */
+table {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #b7b7b7; }
+  table tr {
+    border-bottom: 1px solid #b7b7b7; }
+    table tr:last-child {
+      border-bottom: none; }
+  table td {
+    padding: 26px;
+    border-right: 1px solid #b7b7b7;
+    color: #5e5e5e;
+    font-size: 16px; }
+    table td:first-child {
+      background-color: #f0f0f0;
+      color: #474747;
+      font-size: 16px; }
+    table td:last-child {
+      border-right: none; }
+  table span, table li {
+    line-height: 30px; }
+
 /**
   * Modules
   */
@@ -2471,7 +2493,11 @@ h6 {
   line-height: 22px;
   text-align: center;
   padding-bottom: 8px;
-  border-bottom: 1px solid #0099ff; }
+  border-bottom: 1px solid #0099ff;
+  margin-bottom: 38px; }
+
+section {
+  text-align: center; }
 
 .employees {
   background: url("../img/employee-bg.jpg") no-repeat center center/cover;
@@ -2489,8 +2515,7 @@ h6 {
     line-height: 22px;
     border-bottom: 1px solid #ffffff; }
   .employees-video {
-    width: 100%;
-    height: auto; }
+    width: 100%; }
   .employees-image {
     width: 100%; }
   .employees-image-caption {
@@ -2555,6 +2580,10 @@ h6 {
       position: absolute;
       bottom: 0;
       font-size: 12px; }
+
+.corporate-profile {
+  text-align: center;
+  padding: 54px 0 100px; }
 
 /**
   * States

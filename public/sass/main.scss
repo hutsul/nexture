@@ -29,7 +29,7 @@
   //@import "general/image";
   //@import "general/popup";
   //@import "general/pagination";
-  //@import "general/table";
+  @import "general/table";
 
 /**
   * Modules
@@ -41,6 +41,8 @@
   @import "modules/service";
   @import "modules/employees";
   @import "modules/news";
+  @import "modules/corporate-profile";
+  @import "modules/history";
 
 /**
   * States
