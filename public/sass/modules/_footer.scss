@@ -7,15 +7,13 @@
 	text-align: left;
 	background-color: $footerBgColor;
 	color:$footerColor;
-
+	&-menu {
+		padding-top: 65px;
+	}
 	&-col {
 		display: inline-block;
 		text-align: left;
-		margin-top: 50px;
-
-		&:last-child {
-			margin: 50px 0;
-		}
+		margin-bottom: 50px;
 	}
 	&-col-title {
 		margin-bottom: 40px;
@@ -26,7 +24,7 @@
 		padding-left: 0;
 	}
 	&-sub-list {
-		padding-left: 20px;
+		padding: 15px 0 0 20px;
 	}
 	&-list-item {
 		font-size: 15px;
@@ -46,6 +44,10 @@
 @media screen and (min-width: $smallScreen) {
 	.footer {
 		text-align: center;
+
+		&-col {
+			margin: 0 0 50px;
+		}
 
 		&-bottom-txt{
 			text-align:left;

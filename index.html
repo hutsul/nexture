@@ -9,6 +9,7 @@
 
 		<link type="text/css" rel="stylesheet" href="./public/css/bootstrap.min.css" />
         <link type="text/css" rel="stylesheet" href="./public/css/main.css" />
+        <link type="text/css" rel="stylesheet" href="./public/css/owl.carousel.css" />
 
 
         <!--[if lt IE 9]>
@@ -63,15 +64,51 @@
                     </div>
                 </section>
 
+                <section class="news">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="news-carousel owl-carousel">
+                                    <div class="news-block">
+                                        <img src="./public/img/news-img.jpg" alt="news-image"/>
+                                        <div class="news-image-caption">
+                                            <p class="news-image-title">2016年、夏GRAND OPEN予定</p>
+                                            <p class="news-image-section">ニュース</p>
+                                        </div>
+                                    </div>
+                                    <div class="news-block">
+                                        <img src="./public/img/news-img.jpg" alt="news-image"/>
+                                        <div class="news-image-caption">
+                                            <p class="news-image-title">2016年、夏GRAND OPEN予定</p>
+                                            <p class="news-image-section">ニュース</p>
+                                        </div>
+                                    </div>
+                                    <div class="news-block">
+                                        <img src="./public/img/news-img.jpg" alt="news-image"/>
+                                        <div class="news-image-caption">
+                                            <p class="news-image-title">2016年、夏GRAND OPEN予定</p>
+                                            <p class="news-image-section">ニュース</p>
+                                        </div>
+                                    </div>
+                                    <div class="news-block">
+                                        <img src="./public/img/news-img.jpg" alt="news-image"/>
+                                        <div class="news-image-caption">
+                                            <p class="news-image-title">2016年、夏GRAND OPEN予定</p>
+                                            <p class="news-image-section">ニュース</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section class="employees">
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12 col-sm-6">
                                 <div class="employees-block">
                                     <p class="employees-title">YOUTUBE</p>
-                                    <video class="employees-video hidden" controls>
-                                        <source src="https://youtu.be" type="video/mp4">
-                                    </video>
                                     <iframe class="employees-video" src="http://www.youtube.com">
                                     </iframe>
                                 </div>
@@ -83,7 +120,7 @@
                                         <img class="employees-image" src="./public/img/employees-img.jpg" alt="An awesome picture">
                                         <figcaption class="employees-image-caption">
                                             <p class="employees-image-title">株式会社ネクスチャーは？」について社員より一言を申し上げます。</p>
-                                            <p class="employees-image-more">社員の一言</p>
+                                            <p class="employees-image-section">社員の一言</p>
                                         </figcaption>
                                     </figure>
                                 </div>
@@ -96,7 +133,7 @@
 
             <footer id="footer" class="footer">
                 <div class="container">
-                    <div class="row">
+                    <div class="row footer-menu">
                         <div class="col-sm-3 col-xs-12">
                             <div class="footer-col">
                                 <p class="footer-col-title">COMPANY</p>
@@ -161,7 +198,15 @@
                 </div>
             </footer>
         </div>
-        <script type="text/javascript" src="./public/js/main.js"></script>
+        <script type="text/javascript" src="./public/js/libs/jquery-2.1.1.js"></script>
         <script type="text/javascript" src="./public/js/libs/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./public/js/libs/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="./public/js/main.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $(".owl-carousel").owlCarousel();
+            });
+        </script>
     </body>
 </html>
