@@ -2331,6 +2331,52 @@ h6 {
     .employees-block {
       text-align: left;
       padding: 0; } }
+.news {
+  color: #5d5d5d;
+  font-size: 12px;
+  text-align: center;
+  padding: 60px 0 0; }
+  .news-block {
+    position: relative;
+    max-width: 230px;
+    padding-bottom: 6px; }
+  .news-image {
+    width: 100%; }
+  .news-image-caption {
+    text-align: left;
+    font-size: 12px;
+    background-color: #eaeaea;
+    padding: 10px 15px; }
+  .news-image-title {
+    margin-bottom: 10px; }
+  .news-image-section {
+    margin-bottom: 0;
+    color: #0099ff;
+    font-size: 10px;
+    text-decoration: none; }
+  .news-details {
+    position: absolute;
+    text-align: left;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fabd0a; }
+    .news-details-title, .news-details-text, .news-details-link {
+      padding: 18px; }
+    .news-details-title {
+      font-size: 16px;
+      background-color: #eaeaea; }
+    .news-details-text {
+      font-size: 15px;
+      color: #fff; }
+    .news-details-link {
+      text-decoration: none;
+      color: #ffffff;
+      position: absolute;
+      bottom: 0;
+      font-size: 12px; }
+
 /**
   * States
   */
