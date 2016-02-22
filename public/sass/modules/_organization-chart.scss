@@ -1,5 +1,5 @@
 .organization-chart {
-	padding: 50px 0 80px;
+	//padding: 50px 0 80px;
 	&-block {
 		position: relative;
 	}
@@ -10,5 +10,21 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+	}
+}
+@media screen and (max-width: $smallScreen) {
+
+	.organization-chart {
+
+		&-block {
+			padding-top: 60px;
+		}
+		&-logo {
+			top: 0;
+			right: 0;
+			left:0;
+			max-width: 130px;
+			margin: 0 auto;
+		}
 	}
 }

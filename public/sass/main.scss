@@ -29,7 +29,7 @@
   //@import "general/image";
   //@import "general/popup";
   //@import "general/pagination";
-  //@import "general/table";
+  @import "general/table";
 
 /**
   * Modules
@@ -44,6 +44,8 @@
   @import "modules/representative";
   @import "modules/corporate-profile";
   @import "modules/history";
+  @import "modules/organization-chart";
+  @import "modules/faces-employees";
   @import "modules/security_policy_container";
   @import "modules/corporate_profile";
 

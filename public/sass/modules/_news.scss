@@ -8,7 +8,11 @@
 		position: relative;
 		max-width:230px;
 		margin: 0 auto;
-		padding-bottom: 6px;
+		&:hover {
+			.news-details {
+				top: 0;
+			}
+		}
 	}
 	&-image {
 		width: 100%;
@@ -31,11 +35,12 @@
 	&-details {
 		position: absolute;
 		text-align: left;
-		top: 0;
+		top: 100%;
 		right: 0;
 		bottom: 0;
 		left: 0;
 		background-color: #fabd0a;
+		transition:all 0.5s ease;
 
 		&-title, &-text, &-link {
 			padding: 18px;
@@ -50,18 +55,14 @@
 			color: #fff;
 		}
 		&-link {
+			position: absolute;
 			text-decoration: none;
 			color: #ffffff;
-			position: absolute;
 			bottom: 0;
 			font-size: 12px;
 		}
 	}
-	.owl-carousel {
-
-	}
 	.owl-nav {
-		position: absolute;
 		top: 0;
 		right: 0;
 		bottom: 0;
@@ -82,24 +83,18 @@
 	}
 	.owl-prev {
 		left: -40px;
-		background-position: 37px 0;
-		&:hover {
-			background-position: 37px 0;
-		}
+		background-position: 37px 1px;
 	}
 	.owl-next {
 		right: -40px;
-		background-position: 37px 37px;
-		&:hover {
-			background-position: 37px 37px;
-		}
+		background-position: 37px 36px;
 	}
 }
 @media screen and (max-width: $smallScreen) {
 	.owl-prev {
-		left: 10px !important;
+		left: -10px !important;
 	}
 	.owl-next {
-		right: 10px !important;
+		right: -10px !important;
 	}
 }

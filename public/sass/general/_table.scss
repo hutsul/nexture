@@ -2,6 +2,7 @@
 
 table {
 	width: 100%;
+	min-width: 768px;
 	text-align: left;
 	border:1px solid #b7b7b7;
 
@@ -28,5 +29,13 @@ table {
 	}
 	span,li {
 		line-height: 30px;
+	}
+}
+.table-scroll {
+	overflow-x: scroll;
+}
+@media screen and (max-width: $smallScreen) {
+	.table-scroll {
+
 	}
 }
