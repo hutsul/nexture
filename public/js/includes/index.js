@@ -19,3 +19,28 @@ jQuery('img.img-svg').each(function(){
     }, 'xml');
 
 });
+
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        items:4,
+        nav:true,
+        navText:[],
+        autoplay:true,
+        touchDrag:true,
+        mouseDrag:true,
+        freeDrag:true,
+        autoplayHoverPause:true,
+
+        responsive:{
+            320:{
+                items:1
+            },
+            768:{
+                items:3
+            },
+            992:{
+                items:4
+            }
+        }
+    })
+});

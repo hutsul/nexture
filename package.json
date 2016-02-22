@@ -13,9 +13,9 @@
   "author": "IvanKhartov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IvanKhartov/smacss/issues"
+    "url": "h"
   },
-  "homepage": "https://github.com/IvanKhartov/smacss#readme",
+  "homepage": "",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.5.1",
