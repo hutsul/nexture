@@ -25,11 +25,8 @@ $(document).ready(function(){
         items:4,
         nav:true,
         navText:[],
-        autoplay:true,
-        touchDrag:true,
-        mouseDrag:true,
-        freeDrag:true,
-        autoplayHoverPause:true,
+        autoPlay:true,
+        autoPlayHoverPause:true,
 
         responsive:{
             320:{

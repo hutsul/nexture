@@ -2261,6 +2261,8 @@ table {
       border-right: none; }
   table span, table li {
     line-height: 30px; }
+  table ol {
+    padding-left: 15px; }
 
 .table-scroll {
   overflow-x: scroll; }
@@ -2602,18 +2604,12 @@ section {
       background-color: #eaeaea; }
     .news-details-text {
       font-size: 15px;
-      color: #fff; }
+      color: #fff;
+      min-height: 140px; }
     .news-details-link {
-      position: absolute;
       text-decoration: none;
       color: #ffffff;
-      bottom: 0;
       font-size: 12px; }
-  .news .owl-nav {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0; }
   .news .owl-prev, .news .owl-next {
     position: absolute;
     width: 36px;
@@ -2622,15 +2618,16 @@ section {
     transform: translateY(-50%);
     content: none !important;
     background-image: url("../img/circle-arrows.png");
+    background-repeat: no-repeat;
     transition: all 0.6s ease; }
     .news .owl-prev:hover, .news .owl-next:hover {
       opacity: 0.5; }
   .news .owl-prev {
     left: -40px;
-    background-position: 37px 1px; }
+    background-position: 0 0; }
   .news .owl-next {
     right: -40px;
-    background-position: 37px 36px; }
+    background-position: -2px -36px; }
 
 @media screen and (max-width: 768px) {
   .owl-prev {
@@ -2671,11 +2668,10 @@ section {
     margin: 0 auto; } }
 .faces-block {
   position: relative;
-  max-width: 230px;
-  margin: 0 auto;
-  padding-bottom: 6px; }
-.faces-image {
-  width: 100%; }
+  max-width: 320px;
+  margin: 0 auto 40px; }
+  .faces-block img {
+    width: 100%; }
 .faces-image-caption {
   position: absolute;
   bottom: 0;
