@@ -2190,6 +2190,16 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif; }
 
+h2.section-title {
+  color: #0099ff;
+  font-size: 22px;
+  line-height: 16px;
+  text-align: center;
+  margin-bottom: 40px; }
+  h2.section-title span {
+    border-bottom: 1px solid;
+    padding-bottom: 10px; }
+
 h1 {
   font-size: 36px;
   font-size: 2.25rem;
@@ -2315,6 +2325,8 @@ h6 {
         margin: 0 10px; }
     .main-header .user_box.open .drop_social {
       display: block; }
+    .main-header .user_box.open:after {
+      transform: rotate(180deg); }
   .main-header .social, .main-header .drop_social {
     display: inline-block;
     vertical-align: middle;
@@ -2464,16 +2476,6 @@ h6 {
   .service-text {
     font-size: 15px; }
 
-.section-title {
-  display: inline-block;
-  color: #0099ff;
-  font-size: 22px;
-  line-height: 22px;
-  text-align: center;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #0099ff;
-  margin-bottom: 38px; }
-
 section {
   text-align: center; }
 
@@ -2564,6 +2566,13 @@ section {
   padding-bottom: 90px; }
   .representative_container .representative_content {
     margin-top: 40px; }
+  .representative_container p {
+    font-size: 16px;
+    line-height: 24px; }
+  .representative_container .representative_logo {
+    margin-bottom: 20px; }
+    .representative_container .representative_logo img {
+      width: 100%; }
 
 .corporate-profile {
   text-align: center;

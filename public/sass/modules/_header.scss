@@ -104,6 +104,9 @@
       .drop_social {
         display: block;
       }
+      &:after {
+        transform: rotate(180deg);
+      }
     }
   }
   .social, .drop_social {

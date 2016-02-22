@@ -20,6 +20,18 @@ h6 {
   font-family: $baseFontFamily;
 }
 
+h2.section-title {
+  color:  $sectionTitleColor;
+  font-size: 22px;
+  line-height: 16px;
+  text-align: center;
+  margin-bottom: 40px;
+  span {
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+  }
+}
+
 h1 {
   @include rem(font-size, $fontSizeH1);
   @include rem(margin, $fontMarginH1);
