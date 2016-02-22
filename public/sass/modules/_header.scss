@@ -79,7 +79,7 @@
         max-width: 72px;
         margin-bottom: 0;
         color: $white;
-        font-size: 18px;
+        font-size: 14px;
         margin-right: 5px;
       }
     }
@@ -186,25 +186,12 @@
     .top_navigation {
       padding-top: 25px;
     }
+    .user_box {
+      margin-top: 0;
+    }
     .user_social {
       text-align: left;
       position: static;
-    }
-    .user_box {
-      margin-top: 0;
-      max-width: 130px;
-      padding: 4px 10px;
-      &:after {
-        content: none;
-      }
-      &.open {
-        .drop_social {
-          display: none;
-        }
-      }
-    }
-    .social {
-      display: inline-block;
     }
   }
   .navbar-nav {
@@ -256,11 +243,25 @@
   .main-header {
     .navbar-nav {
       li + li {
-        margin-left: 35px;
+        margin-left: 25px;
       }
     }
     .social {
       margin-left: 5px;
+      display: inline-block;
+    }
+    .user_box {
+      margin-top: 0;
+      max-width: 130px;
+      padding: 4px 10px;
+      &:after {
+        content: none;
+      }
+      &.open {
+        .drop_social {
+          display: none;
+        }
+      }
     }
   }
 }
