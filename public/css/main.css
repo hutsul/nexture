@@ -2511,6 +2511,12 @@ h6 {
     .employees-block {
       text-align: left;
       padding: 0; } }
+.representative_container {
+  padding-top: 50px;
+  padding-bottom: 90px; }
+  .representative_container .representative_content {
+    margin-top: 40px; }
+
 /**
   * States
   */
