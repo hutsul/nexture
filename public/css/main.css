@@ -2372,6 +2372,13 @@ h6 {
   width: 14px;
   height: 14px;
   margin-right: 8px; }
+.header_slider .arrow_container {
+  position: absolute;
+  height: 100%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0; }
 
 @media screen and (min-width: 768px) {
   .main-header .top_navigation {
@@ -2424,6 +2431,10 @@ h6 {
     margin-left: 35px; }
   .main-header .social {
     margin-left: 5px; } }
+.middle_content {
+  padding-top: 50px;
+  padding-bottom: 90px; }
+
 .footer {
   text-align: left;
   background-color: #3f3f3f;
@@ -2561,23 +2572,61 @@ section {
       bottom: 0;
       font-size: 12px; }
 
-.representative_container {
-  padding-top: 50px;
-  padding-bottom: 90px; }
-  .representative_container .representative_content {
-    margin-top: 40px; }
-  .representative_container p {
-    font-size: 16px;
-    line-height: 24px; }
-  .representative_container .representative_logo {
-    margin-bottom: 20px; }
-    .representative_container .representative_logo img {
-      width: 100%; }
+.representative_container .representative_content {
+  margin-top: 40px; }
+.representative_container p {
+  font-size: 16px;
+  line-height: 24px; }
+.representative_container .representative_logo {
+  margin-bottom: 20px; }
+  .representative_container .representative_logo img {
+    width: 100%; }
 
 .corporate-profile {
   text-align: center;
   padding: 54px 0 100px; }
 
+.security_policy_container ul.nav-tabs {
+  width: 100%;
+  display: table; }
+  .security_policy_container ul.nav-tabs li {
+    display: block;
+    float: none;
+    text-align: center; }
+  .security_policy_container ul.nav-tabs li.active a {
+    color: #fabd0a;
+    border-bottom: 4px solid #fabd0a;
+    background: none; }
+  .security_policy_container ul.nav-tabs a {
+    border-right: none !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: 4px solid #adadad;
+    color: #adadad;
+    margin-right: 0;
+    padding: 15px 0; }
+    .security_policy_container ul.nav-tabs a:focus, .security_policy_container ul.nav-tabs a:hover {
+      color: #fabd0a;
+      border-bottom: 4px solid #fabd0a;
+      background: none; }
+.security_policy_container .tab-content {
+  padding-top: 50px; }
+
+.security_policy_content ul {
+  padding-left: 0; }
+  .security_policy_content ul li {
+    list-style-type: none; }
+.security_policy_content p {
+  color: #5e5e5e;
+  font-size: 16px;
+  line-height: 32px;
+  margin-bottom: 5px; }
+  .security_policy_content p span.row_title {
+    font-weight: bold; }
+
+@media screen and (min-width: 768px) {
+  .security_policy_container ul.nav-tabs li {
+    display: table-cell; } }
 /**
   * States
   */
