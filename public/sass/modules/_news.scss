@@ -29,6 +29,9 @@
 		text-decoration: none;
 	}
 	&-details {
+
+		display: none;
+
 		position: absolute;
 		text-align: left;
 		top: 0;
@@ -97,9 +100,9 @@
 }
 @media screen and (max-width: $smallScreen) {
 	.owl-prev {
-		left: 10px !important;
+		left: -10px !important;
 	}
 	.owl-next {
-		right: 10px !important;
+		right: -10px !important;
 	}
 }

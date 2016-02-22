@@ -2498,7 +2498,13 @@ section {
     width: 100%; }
   .employees-image {
     width: 100%; }
+  .employees figure {
+    position: relative; }
   .employees-image-caption {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
     text-align: left;
     font-size: 12px;
     background-color: #eaeaea;
@@ -2519,10 +2525,11 @@ section {
   color: #5d5d5d;
   font-size: 12px;
   text-align: center;
-  padding: 60px 0 0; }
+  padding: 60px 0; }
   .news-block {
     position: relative;
     max-width: 230px;
+    margin: 0 auto;
     padding-bottom: 6px; }
   .news-image {
     width: 100%; }
@@ -2539,6 +2546,7 @@ section {
     font-size: 10px;
     text-decoration: none; }
   .news-details {
+    display: none;
     position: absolute;
     text-align: left;
     top: 0;
@@ -2560,7 +2568,40 @@ section {
       position: absolute;
       bottom: 0;
       font-size: 12px; }
+  .news .owl-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  .news .owl-prev, .news .owl-next {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: none !important;
+    background-image: url("../img/circle-arrows.png");
+    transition: all 0.6s ease; }
+    .news .owl-prev:hover, .news .owl-next:hover {
+      opacity: 0.5; }
+  .news .owl-prev {
+    left: -40px;
+    background-position: 37px 0; }
+    .news .owl-prev:hover {
+      background-position: 37px 0; }
+  .news .owl-next {
+    right: -40px;
+    background-position: 37px 37px; }
+    .news .owl-next:hover {
+      background-position: 37px 37px; }
 
+@media screen and (max-width: 768px) {
+  .owl-prev {
+    left: -10px !important; }
+
+  .owl-next {
+    right: -10px !important; } }
 .representative_container {
   padding-top: 50px;
   padding-bottom: 90px; }
@@ -2577,6 +2618,45 @@ section {
 .corporate-profile {
   text-align: center;
   padding: 54px 0 100px; }
+
+.organization-chart {
+  padding: 50px 0 80px; }
+  .organization-chart-block {
+    position: relative; }
+  .organization-chart-scheme {
+    width: 100%; }
+  .organization-chart-logo {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+@media screen and (max-width: 768px) {
+  .organization-chart-logo {
+    top: -32px;
+    max-width: 100px; } }
+.faces-block {
+  position: relative;
+  max-width: 230px;
+  margin: 0 auto;
+  padding-bottom: 6px; }
+.faces-image {
+  width: 100%; }
+.faces-image-caption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  \left: 0;
+  text-align: left;
+  font-size: 12px;
+  background-color: #eaeaea;
+  padding: 10px 15px; }
+.faces-image-title {
+  margin-bottom: 10px; }
+.faces-image-section {
+  margin-bottom: 0;
+  color: #0099ff;
+  font-size: 10px;
+  text-decoration: none; }
 
 /**
   * States

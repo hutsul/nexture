@@ -12,3 +12,13 @@
 		left: 0;
 	}
 }
+@media screen and (max-width: $smallScreen) {
+
+	.organization-chart {
+
+		&-logo {
+			top: -32px;
+			max-width: 100px;
+		}
+	}
+}

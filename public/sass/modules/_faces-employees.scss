@@ -1,0 +1,31 @@
+.faces {
+
+	&-block {
+		position: relative;
+		max-width:230px;
+		margin: 0 auto;
+		padding-bottom: 6px;
+	}
+	&-image {
+		width: 100%;
+	}
+	&-image-caption {
+		position: absolute;
+		bottom: 0;
+		right: 0;\left: 0;
+		text-align: left;
+		font-size: 12px;
+		background-color: $employeesImgCaptionBg;
+		padding: 10px 15px;
+	}
+	&-image-title {
+		margin-bottom: 10px;
+	}
+	&-image-section {
+		margin-bottom: 0;
+		color:  #0099ff;
+		font-size: 10px;
+		text-decoration: none;
+	}
+
+}
