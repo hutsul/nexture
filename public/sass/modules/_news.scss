@@ -1,3 +1,59 @@
 .news {
+	color:#5d5d5d;
+	font-size: 12px;
+	text-align: center;
+	padding: 60px 0 0;
 
+	&-block {
+		position: relative;
+		max-width:230px;
+		padding-bottom: 6px;
+	}
+	&-image {
+		width: 100%;
+	}
+	&-image-caption {
+		text-align: left;
+		font-size: 12px;
+		background-color: $employeesImgCaptionBg;
+		padding: 10px 15px;
+	}
+	&-image-title {
+		margin-bottom: 10px;
+	}
+	&-image-section {
+		margin-bottom: 0;
+		color:  #0099ff;
+		font-size: 10px;
+		text-decoration: none;
+	}
+	&-details {
+		position: absolute;
+		text-align: left;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #fabd0a;
+
+		&-title, &-text, &-link {
+			padding: 18px;
+		}
+
+		&-title {
+			font-size: 16px;
+			background-color: #eaeaea;
+		}
+		&-text {
+			font-size: 15px;
+			color: #fff;
+		}
+		&-link {
+			text-decoration: none;
+			color: #ffffff;
+			position: absolute;
+			bottom: 0;
+			font-size: 12px;
+		}
+	}
 }
