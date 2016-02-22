@@ -27,7 +27,7 @@ h2.section-title {
   text-align: center;
   margin-bottom: 40px;
   span {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid $sectionTitleColor;
     padding-bottom: 10px;
   }
 }

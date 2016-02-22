@@ -2197,7 +2197,7 @@ h2.section-title {
   text-align: center;
   margin-bottom: 40px; }
   h2.section-title span {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #0099ff;
     padding-bottom: 10px; }
 
 h1 {
@@ -2239,6 +2239,32 @@ h6 {
 /**
   * General
   */
+table {
+  width: 100%;
+  min-width: 768px;
+  text-align: left;
+  border: 1px solid #b7b7b7; }
+  table tr {
+    border-bottom: 1px solid #b7b7b7; }
+    table tr:last-child {
+      border-bottom: none; }
+  table td {
+    padding: 26px;
+    border-right: 1px solid #b7b7b7;
+    color: #5e5e5e;
+    font-size: 16px; }
+    table td:first-child {
+      background-color: #f0f0f0;
+      color: #474747;
+      font-size: 16px; }
+    table td:last-child {
+      border-right: none; }
+  table span, table li {
+    line-height: 30px; }
+
+.table-scroll {
+  overflow-x: scroll; }
+
 /**
   * Modules
   */
@@ -2435,6 +2461,9 @@ h6 {
   padding-top: 50px;
   padding-bottom: 90px; }
 
+a:hover {
+  cursor: pointer; }
+
 .footer {
   text-align: left;
   background-color: #3f3f3f;
@@ -2509,7 +2538,13 @@ section {
     width: 100%; }
   .employees-image {
     width: 100%; }
+  .employees figure {
+    position: relative; }
   .employees-image-caption {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
     text-align: left;
     font-size: 12px;
     background-color: #eaeaea;
@@ -2530,11 +2565,13 @@ section {
   color: #5d5d5d;
   font-size: 12px;
   text-align: center;
-  padding: 60px 0 0; }
+  padding: 60px 0; }
   .news-block {
     position: relative;
     max-width: 230px;
-    padding-bottom: 6px; }
+    margin: 0 auto; }
+    .news-block:hover .news-details {
+      top: 0; }
   .news-image {
     width: 100%; }
   .news-image-caption {
@@ -2552,11 +2589,12 @@ section {
   .news-details {
     position: absolute;
     text-align: left;
-    top: 0;
+    top: 100%;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #fabd0a; }
+    background-color: #fabd0a;
+    transition: all 0.5s ease; }
     .news-details-title, .news-details-text, .news-details-link {
       padding: 18px; }
     .news-details-title {
@@ -2566,12 +2604,40 @@ section {
       font-size: 15px;
       color: #fff; }
     .news-details-link {
+      position: absolute;
       text-decoration: none;
       color: #ffffff;
-      position: absolute;
       bottom: 0;
       font-size: 12px; }
+  .news .owl-nav {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  .news .owl-prev, .news .owl-next {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: none !important;
+    background-image: url("../img/circle-arrows.png");
+    transition: all 0.6s ease; }
+    .news .owl-prev:hover, .news .owl-next:hover {
+      opacity: 0.5; }
+  .news .owl-prev {
+    left: -40px;
+    background-position: 37px 1px; }
+  .news .owl-next {
+    right: -40px;
+    background-position: 37px 36px; }
 
+@media screen and (max-width: 768px) {
+  .owl-prev {
+    left: -10px !important; }
+
+  .owl-next {
+    right: -10px !important; } }
 .representative_container .representative_content {
   margin-top: 40px; }
 .representative_container p {
@@ -2583,8 +2649,49 @@ section {
     width: 100%; }
 
 .corporate-profile {
-  text-align: center;
-  padding: 54px 0 100px; }
+  text-align: center; }
+
+.organization-chart-block {
+  position: relative; }
+.organization-chart-scheme {
+  width: 100%; }
+.organization-chart-logo {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+@media screen and (max-width: 768px) {
+  .organization-chart-block {
+    padding-top: 60px; }
+  .organization-chart-logo {
+    top: 0;
+    right: 0;
+    left: 0;
+    max-width: 130px;
+    margin: 0 auto; } }
+.faces-block {
+  position: relative;
+  max-width: 230px;
+  margin: 0 auto;
+  padding-bottom: 6px; }
+.faces-image {
+  width: 100%; }
+.faces-image-caption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: left;
+  font-size: 12px;
+  background-color: #eaeaea;
+  padding: 10px 15px; }
+.faces-image-title {
+  margin-bottom: 10px; }
+.faces-image-section {
+  margin-bottom: 0;
+  color: #0099ff;
+  font-size: 10px;
+  text-decoration: none; }
 
 .security_policy_container ul.nav-tabs {
   width: 100%;
