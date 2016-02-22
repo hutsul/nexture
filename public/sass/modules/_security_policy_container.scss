@@ -1,0 +1,62 @@
+.security_policy_container {
+  ul.nav-tabs {
+    width: 100%;
+    display: table;
+    li {
+      display: block;
+      float: none;
+      text-align: center;
+    }
+    li.active {
+      a {
+        color: $tabsLinkActive;
+        border-bottom: 4px solid $tabsLinkActive;
+        background: none;
+      }
+    }
+    a {
+      border-right: none !important;
+      border-left: none !important;
+      border-top: none !important;
+      border-bottom: 4px solid $tabsLinkUnActive;
+      color: $tabsLinkUnActive;
+      margin-right: 0;
+      padding: 15px 0;
+      &:focus, &:hover {
+        color: $tabsLinkActive;
+        border-bottom: 4px solid $tabsLinkActive;
+        background: none;
+      }
+    }
+  }
+  .tab-content {
+    padding-top: 50px;
+  }
+}
+.security_policy_content {
+  ul {
+    padding-left: 0;
+    li {
+      list-style-type: none;
+    }
+  }
+  p {
+    color: $tabContentColor;
+    font-size: 16px;
+    line-height: 32px;
+    margin-bottom: 5px;
+    span.row_title {
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (min-width: $smallScreen) {
+  .security_policy_container {
+    ul.nav-tabs {
+      li {
+        display: table-cell;
+      }
+    }
+  }
+}

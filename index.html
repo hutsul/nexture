@@ -113,15 +113,17 @@
                             </div>
                         </div>
 
-                        <!-- Controls -->
-                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                            <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-                            <i class="fa fa-angle-left" aria-hidden="true"></i>
-                        </a>
-                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                            <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-                            <i class="fa fa-angle-right" aria-hidden="true"></i>
-                        </a>
+                        <div class="container arrow_container">
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -401,6 +403,11 @@
         <script type="text/javascript">
             $(document).ready(function(){
                 $(".owl-carousel").owlCarousel();
+            });
+        </script>
+        <script>
+            $('.user_box').click(function(){
+                $(this).toggleClass('open');
             });
         </script>
     </body>
