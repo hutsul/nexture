@@ -1,0 +1,17 @@
+.representative_container {
+  padding-top: 50px;
+  padding-bottom: 90px;
+  .representative_content {
+    margin-top: 40px; 
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .representative_logo {
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+    }
+  }
+}
