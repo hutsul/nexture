@@ -57,13 +57,17 @@
 			height: 140px;
 			overflow: hidden;
 		}
-		&-link {
+		&-btn {
 			padding: 10px 15px;
 			background-color: $yellow1;
 			color: $white;
 			text-decoration: none;
 			margin-left: 20px;
 			font-size: 12px;
+
+			&:hover {
+				color: $white;
+			}
 		}
 	}
 	.owl-prev, .owl-next {

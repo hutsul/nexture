@@ -210,12 +210,10 @@
       &:before {
         content: '';
         position: absolute;
-        width: 0;
         top: -2px;
         left: 50%;
         right: 50%;
         height: 2px;
-        transform: translate(-50%, 0);
         background-color: $navLinkActive;
         transition:all 0.3s ease;
       }
@@ -247,6 +245,7 @@
       .sub-menu:before {
         left: 0;
         right: 0;
+        transform: translate(-50%, 0);
       }
     }
   }

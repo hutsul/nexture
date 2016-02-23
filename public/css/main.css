@@ -2438,12 +2438,10 @@ table {
     .main-header .sub_menu:before {
       content: '';
       position: absolute;
-      width: 0;
       top: -2px;
       left: 50%;
       right: 50%;
       height: 2px;
-      transform: translate(-50%, 0);
       background-color: #0099ff;
       transition: all 0.3s ease; }
     .main-header .sub_menu li {
@@ -2465,7 +2463,8 @@ table {
     display: block; }
   .navbar-nav > li:hover .sub-menu:before {
     left: 0;
-    right: 0; }
+    right: 0;
+    transform: translate(-50%, 0); }
 
   .header_slider .item {
     height: auto; }
@@ -2662,13 +2661,15 @@ section {
       color: #fff;
       height: 140px;
       overflow: hidden; }
-    .news-details-link {
+    .news-details-btn {
       padding: 10px 15px;
       background-color: #fabd0a;
       color: #ffffff;
       text-decoration: none;
       margin-left: 20px;
       font-size: 12px; }
+      .news-details-btn:hover {
+        color: #ffffff; }
   .news .owl-prev, .news .owl-next {
     position: absolute;
     top: 0;
