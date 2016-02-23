@@ -59,14 +59,11 @@
 		}
 		&-link {
 			padding: 10px 15px;
-			background-color: #fabd0a;
-			text-decoration: none !important;
+			background-color: $yellow1;
+			color: $white;
+			text-decoration: none;
 			margin-left: 20px;
 			font-size: 12px;
-
-			a {
-				color: #ffffff !important;
-			}
 		}
 	}
 	.owl-prev, .owl-next {

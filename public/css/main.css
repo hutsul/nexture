@@ -2624,11 +2624,10 @@ section {
     .news-details-link {
       padding: 10px 15px;
       background-color: #fabd0a;
-      text-decoration: none !important;
+      color: #ffffff;
+      text-decoration: none;
       margin-left: 20px;
       font-size: 12px; }
-      .news-details-link a {
-        color: #ffffff !important; }
   .news .owl-prev, .news .owl-next {
     position: absolute;
     top: 0;
