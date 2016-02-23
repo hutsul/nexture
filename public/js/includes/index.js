@@ -40,4 +40,7 @@ $(document).ready(function(){
             }
         }
     })
+    $('.user_box').click(function(){
+        $(this).toggleClass('open');
+    });
 });
