@@ -26,6 +26,7 @@ $(document).ready(function(){
         nav:true,
         navText:[],
         autoPlay:true,
+        loop:true,
         autoPlayHoverPause:true,
 
         responsive:{
