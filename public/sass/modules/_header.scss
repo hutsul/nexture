@@ -2,9 +2,6 @@
 
 .main-header {
   position: relative;
-  .logo_container {
-    padding-top: 8px;
-  }
   .top_navigation {
     position: absolute;
     top: 0;
@@ -22,22 +19,45 @@
       box-shadow: none;
     }
   }
+  .navbar-collapse {
+    max-width: 300px;
+    position: relative;
+    z-index: 50;
+    top: -60px;
+    left: -16px;
+    .close_menu {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      font-size: 20px;
+      color: $white;
+      cursor: pointer;
+    }
+  }
   .navbar-nav {
+    background: rgba( $listBg, .9);
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 25px;
     li {
       position: relative;
     }
-    a {
+    span {
       color: $white;
       background: none !important;
       padding: 5px;
       border-bottom: 1px solid transparent;
+      cursor: pointer;
+      font-size: 16px;
+      display: inline-block;
+      margin-bottom: 15px;
       &:hover {
         color: $navLinkActive;
         border-color: transparent;
       }
     }
     li.active {
-      & > a {
+      & > span {
         color: $navLinkActive;
       }
     }
@@ -143,6 +163,25 @@
   .drop_social {
     display: none;
   }
+
+  .sub_menu {
+    background: rgba( $listBgSub, .6);
+    padding: 15px 0 5px;
+    box-shadow: inset 0px 0px 30px 10px rgba(0,0,0,0.17);
+    margin-bottom: 15px;
+    li {
+      list-style-type: none;
+      margin-bottom: 15px;
+    }
+    a {
+      border-bottom: none !important;
+      color: $white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 0;
+      display: block;
+    }
+  }
 }
 .header_slider {
   .item {
@@ -207,6 +246,7 @@
       padding: 8px 0 0;
       display: none;
       transition: all 1s;
+      margin-bottom: 10px;
       &:before {
         content: '';
         position: absolute;
@@ -228,9 +268,27 @@
         font-size: 11px;
         padding: 0;
         display: block;
+        &:hover {
+          color: $navLinkActive;
+        }
       }
       li + li {
         margin-left: 0 !important;
+      }
+    }
+    .navbar-collapse {
+      max-width: 100%;
+      position: static;
+      .close_menu {
+        display: none;
+      }
+    }
+    .navbar-nav {
+      background: none;
+      padding: 0;
+      span {
+        font-size: 14px;
+        margin-bottom: 0;
       }
     }
   }
@@ -312,6 +370,14 @@
           display: none;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: $smallScreen) {
+  #accordion {
+    ul.sub_menu {
+      display: none;
     }
   }
 }
