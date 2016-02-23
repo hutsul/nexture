@@ -53,41 +53,50 @@
 		&-text {
 			font-size: 15px;
 			color: #fff;
+			min-height: 140px;
 		}
 		&-link {
-			position: absolute;
+			//position: absolute;
+			//bottom: 0;
 			text-decoration: none;
 			color: #ffffff;
-			bottom: 0;
 			font-size: 12px;
 		}
 	}
-	.owl-nav {
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-	}
 	.owl-prev, .owl-next {
 		position: absolute;
-		width: 36px;
-		height: 36px;
-		top: 50%;
-		transform: translateY(-50%);
+		top: 0;
+		width: 20%;
+		height: 100%;
 		content:none !important;
-		background-image: url('../img/circle-arrows.png');
 		transition: all 0.6s ease;
+		&:after {
+			content: '';
+			width: 36px;
+			height: 36px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			background-image: url('../img/circle-arrows.png');
+			background-repeat: no-repeat;
+		}
 		&:hover {
 			opacity: 0.5;
 		}
 	}
 	.owl-prev {
-		left: -40px;
-		background-position: 37px 1px;
+		left: -36px;
+		&:after {
+			left: 0;
+			background-position: 0 0;
+		}
 	}
 	.owl-next {
-		right: -40px;
-		background-position: 37px 36px;
+		right: -36px;
+		&:after {
+			right: 0;
+			background-position: -2px -36px;
+		}
 	}
 }
 @media screen and (max-width: $smallScreen) {

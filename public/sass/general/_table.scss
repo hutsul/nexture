@@ -30,12 +30,10 @@ table {
 	span,li {
 		line-height: 30px;
 	}
+	ol {
+		padding-left: 15px;
+	}
 }
 .table-scroll {
 	overflow-x: scroll;
-}
-@media screen and (max-width: $smallScreen) {
-	.table-scroll {
-
-	}
 }

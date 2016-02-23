@@ -13,13 +13,33 @@
 
   &-footer { }
 }
+body {
+  height: 100%;
+}
+//.section {
+//  padding-top: 15px;
+//  padding-bottom: 15px;
+//
+//  &-title {
+//    font-family: $extraFontFamily;
+//    @include rem(font-size, 34px);
+//  }
+//}
+.footerFixed {
+  min-height: 100%;
+  position: relative;
 
-.section {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  body {
+    min-height: 1px;
+    height: 100%;
+    margin-bottom: calc(#{$footerHeight} + 20px);
+  }
 
-  &-title {
-    font-family: $extraFontFamily;
-    @include rem(font-size, 34px);
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: $footerHeight;
+    width: 100%;
   }
 }
