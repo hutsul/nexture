@@ -22,10 +22,10 @@
 		text-align: left;
 		font-size: 12px;
 		background-color: $employeesImgCaptionBg;
-		padding: 10px 15px;
+		padding: 15px;
 	}
 	&-image-title {
-		margin-bottom: 10px;
+		margin-bottom: 2px;
 	}
 	&-image-section {
 		margin-bottom: 0;
@@ -36,7 +36,7 @@
 	&-details {
 		position: absolute;
 		text-align: left;
-		top: 76%;
+		top: 75%;
 		right: 0;
 		bottom: 0;
 		left: 0;
@@ -62,8 +62,11 @@
 			background-color: #fabd0a;
 			text-decoration: none !important;
 			margin-left: 20px;
-			color: #ffffff;
 			font-size: 12px;
+
+			a {
+				color: #ffffff !important;
+			}
 		}
 	}
 	.owl-prev, .owl-next {

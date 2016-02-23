@@ -21,6 +21,13 @@ a {
     outline: 0;
   }
 }
+a {
+  color:$white;
+  &:hover {
+    color:$blue4;
+    text-decoration: none;
+  }
+}
 img {
   vertical-align: middle;
   max-width: 100%;
