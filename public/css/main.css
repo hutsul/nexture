@@ -2435,7 +2435,7 @@ table {
     padding: 8px 0 0;
     border-top: 1px solid #0099ff;
     display: none;
-    transition: all 4s; }
+    transition: all 1s; }
     .main-header .sub_menu li {
       list-style-type: none;
       margin-bottom: 10px; }
