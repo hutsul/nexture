@@ -205,9 +205,20 @@
       text-align: center;
       background: rgba( $subMenuBg, .25);
       padding: 8px 0 0;
-      border-top: 1px solid $navLinkActive;
       display: none;
       transition: all 1s;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        top: -2px;
+        left: 50%;
+        right: 50%;
+        height: 2px;
+        transform: translate(-50%, 0);
+        background-color: $navLinkActive;
+        transition:all 0.3s ease;
+      }
       li {
         list-style-type: none;
         margin-bottom: 10px;
@@ -232,6 +243,10 @@
     & > li:hover {
       .sub_menu {
         display: block;
+      }
+      .sub-menu:before {
+        left: 0;
+        right: 0;
       }
     }
   }

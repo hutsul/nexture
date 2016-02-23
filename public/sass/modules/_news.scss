@@ -101,12 +101,37 @@
 			background-position: -2px -36px;
 		}
 	}
+	.owl-dots {
+		padding-top: 30px;
+	}
+	.owl-dot {
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		border:2px solid $grey2;
+		border-radius:50%;
+		margin-right: 10px;
+		&:last-child {
+			margin-right: 0;
+		}
+		&.active {
+			background-color: $grey2;
+		}
+	}
+	.btn-view-all {
+		margin-top: 50px;
+		display: inline-block;
+		height: 44px;
+		line-height: 44px;
+		font-size: 22px;
+		padding: 0 50px;
+		color:$white;
+		background-color: $blue1;
+		text-decoration: none;
+	}
 }
 @media screen and (max-width: $smallScreen) {
-	.owl-prev {
-		left: -10px !important;
-	}
-	.owl-next {
-		right: -10px !important;
+	.owl-prev, .owl-next {
+		visibility: hidden;
 	}
 }

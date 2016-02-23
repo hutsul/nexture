@@ -25,6 +25,8 @@ $(document).ready(function(){
         items:4,
         nav:true,
         navText:[],
+        dots:true,
+        dotsEach:true,
         autoPlay:true,
         loop:true,
         autoPlayHoverPause:true,
