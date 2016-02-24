@@ -40,9 +40,12 @@
 
                                         <!-- Collect the nav links, forms, and other content for toggling -->
                                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                            <ul class="nav navbar-nav">
+                                            <span class="close_menu"  data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                                <i class="fa fa-times"></i>
+                                            </span>
+                                            <ul class="nav navbar-nav" id="accordion">
                                                 <li class="active">
-                                                    <a href="javascript:;">会社情報 <span class="sr-only">(current)</span></a>
+                                                    <span>会社情報 <span class="sr-only">(current)</span></span>
                                                     <ul class="sub_menu">
                                                         <li><a href="javascript:;">代表挨拶</a></li>
                                                         <li><a href="javascript:;">企業概要</a></li>
@@ -52,9 +55,9 @@
                                                         <li><a href="javascript:;">企業概要</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="javascript:;">ニュース</a></li>
+                                                <li><span>ニュース</span></li>
                                                 <li>
-                                                    <a href="javascript:;">サービス</a>
+                                                    <span>サービス</span>
                                                     <ul class="sub_menu">
                                                         <li><a href="javascript:;">業務システム開発</a></li>
                                                         <li><a href="javascript:;">Global アウトソーシング</a></li>
@@ -62,14 +65,14 @@
                                                     </ul>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:;">採用</a>
+                                                    <span>採用</span>
                                                     <ul class="sub_menu">
                                                         <li><a href="javascript:;">採用情報</a></li>
                                                         <li><a href="javascript:;">社員の一言</a></li>
                                                         <li><a href="javascript:;">福利厚生・各種制度</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="javascript:;">お問い合わせ</a></li>
+                                                <li><span>お問い合わせ</span></li>
                                             </ul>
                                         </div><!-- /.navbar-collapse -->
                                     </div><!-- /.container-fluid -->
@@ -394,5 +397,21 @@
         <!--<script type="text/javascript" src="./public/js/libs/bootstrap.min.js"></script>-->
         <!--<script type="text/javascript" src="./public/js/libs/owl.carousel.min.js"></script>-->
         <script type="text/javascript" src="./public/js/main.js"></script>
+        <script>
+            if (window.innerWidth <= 767) {
+                $("#accordion li > span").click(function(){
+                    $('span').removeClass('active');
+                    $(this).addClass('active');
+                    if(!$(this).next().is(':visible')) {
+                        $('#accordion ul').slideUp(300);
+                    }
+                    $(this).next().slideToggle(300);
+                });
+
+                $('#accordion .sub_menu:eq(0)').show();
+                $('#accordion  li > span:eq(0)').addClass('active');
+            }
+
+        </script>
     </body>
 </html>                                                                                                                                                  
