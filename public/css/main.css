@@ -2245,6 +2245,9 @@ h6 {
 /**
   * General
   */
+.table-scroll {
+  overflow-x: scroll; }
+
 table {
   width: 100%;
   min-width: 768px;
@@ -2269,9 +2272,6 @@ table {
     line-height: 30px; }
   table ol {
     padding-left: 15px; }
-
-.table-scroll {
-  overflow-x: scroll; }
 
 /**
   * Modules
@@ -2572,10 +2572,6 @@ a:hover {
   text-align: left;
   background-color: #3f3f3f;
   color: #ffffff; }
-  .footer .fb-comments, .footer .fb-comments iframe[style], .footer .fb-comments span {
-    width: 100% !important; }
-  .footer .fb-page, .footer .fb-page iframe[style], .footer .fb-page span {
-    width: 100% !important; }
   .footer-menu {
     padding-top: 65px; }
   .footer-col {
@@ -2672,7 +2668,6 @@ section {
       text-align: left;
       padding: 0; } }
 .news {
-  color: #5d5d5d;
   font-size: 12px;
   text-align: center;
   padding: 60px 0; }
@@ -2691,8 +2686,9 @@ section {
     background-color: #eaeaea;
     padding: 15px; }
   .news-image-title {
+    color: #5d5d5d;
     margin-bottom: 2px; }
-  .news-image-section {
+  .news-image-text {
     margin-bottom: 0;
     color: #0099ff;
     font-size: 10px;
@@ -2713,7 +2709,7 @@ section {
       background-color: #eaeaea; }
     .news-details-text {
       font-size: 15px;
-      color: #fff;
+      color: #ffffff;
       height: 140px;
       overflow: hidden; }
     .news-details-btn {
