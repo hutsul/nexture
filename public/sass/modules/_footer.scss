@@ -1,9 +1,9 @@
 // Footer block
 .footer {
-	//position: absolute;
-	//bottom: 0;
-	//left: 0;
-	//right: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	text-align: left;
 	background-color: $footerBgColor;
 	color:$footerColor;
@@ -30,7 +30,7 @@
 	&-list-item {
 		font-size: 15px;
 		margin:0 0 16px;
-		color:$white;
+		color:$footerColor;
 		text-decoration: none;
 	}
 	&-bottom {

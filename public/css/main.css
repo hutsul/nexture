@@ -2568,7 +2568,20 @@ table {
 a:hover {
   cursor: pointer; }
 
+section {
+  text-align: center; }
+
+html, body {
+  min-height: 100%;
+  position: relative; }
+  html .wrapper, body .wrapper {
+    height: 100%; }
+
 .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   text-align: left;
   background-color: #3f3f3f;
   color: #ffffff; }
@@ -2621,9 +2634,6 @@ a:hover {
     font-weight: bold; }
   .service-text {
     font-size: 15px; }
-
-section {
-  text-align: center; }
 
 .employees {
   background: url("../img/employee-bg.jpg") no-repeat center center/cover;

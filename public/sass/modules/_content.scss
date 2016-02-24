@@ -7,3 +7,15 @@
 a:hover {
   cursor: pointer;
 }
+section {
+  text-align: center;
+}
+
+html, body {
+  min-height: 100%;
+  position: relative;
+
+  .wrapper {
+    height: 100%;
+  }
+}
