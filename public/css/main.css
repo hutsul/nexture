@@ -2245,6 +2245,9 @@ h6 {
 /**
   * General
   */
+.table-scroll {
+  overflow-x: scroll; }
+
 table {
   width: 100%;
   min-width: 768px;
@@ -2269,9 +2272,6 @@ table {
     line-height: 30px; }
   table ol {
     padding-left: 15px; }
-
-.table-scroll {
-  overflow-x: scroll; }
 
 /**
   * Modules
@@ -2313,19 +2313,17 @@ table {
     .main-header .navbar-nav li {
       position: relative; }
     .main-header .navbar-nav span {
+      display: block;
       color: #ffffff;
       background: none !important;
       padding: 5px;
       border-bottom: 1px solid transparent;
       cursor: pointer;
       font-size: 16px;
-      display: inline-block;
       margin-bottom: 15px; }
       .main-header .navbar-nav span:hover {
         color: #0099ff;
         border-color: transparent; }
-    .main-header .navbar-nav li.active > span {
-      color: #0099ff; }
   .main-header .user_social {
     text-align: right;
     position: absolute;
@@ -2410,7 +2408,6 @@ table {
   .main-header .sub_menu {
     background: rgba(9, 52, 80, 0.6);
     padding: 15px 0 5px;
-    box-shadow: inset 0px 0px 30px 10px rgba(0, 0, 0, 0.17);
     margin-bottom: 15px; }
     .main-header .sub_menu li {
       list-style-type: none;
@@ -2502,16 +2499,23 @@ table {
     background: none;
     padding: 0; }
     .main-header .navbar-nav span {
+      display: inline-block;
       font-size: 14px;
       margin-bottom: 0; }
+    .main-header .navbar-nav li.active > span {
+      color: #0099ff; }
 
   .navbar-nav li + li {
     margin-left: 5px; }
-  .navbar-nav > li:hover .sub_menu {
-    opacity: 1; }
-    .navbar-nav > li:hover .sub_menu:before {
-      left: 0 !important;
-      right: 0 !important; }
+  .navbar-nav > li {
+    overflow: hidden; }
+    .navbar-nav > li:hover {
+      overflow: visible; }
+      .navbar-nav > li:hover .sub_menu {
+        opacity: 1; }
+        .navbar-nav > li:hover .sub_menu:before {
+          left: 0 !important;
+          right: 0 !important; }
 
   .header_slider .item {
     height: auto; }
@@ -2539,6 +2543,9 @@ table {
   .header_slider .carousel-indicators li {
     width: 18px;
     height: 18px; } }
+.show_sub {
+  display: block; }
+
 @media screen and (min-width: 992px) {
   .main-header .navbar-nav li + li {
     margin-left: 25px; }
@@ -2555,7 +2562,8 @@ table {
       display: none; } }
 @media screen and (max-width: 768px) {
   #accordion ul.sub_menu {
-    display: none; } }
+    display: none;
+    box-shadow: inset 0px 0px 30px 10px rgba(0, 0, 0, 0.17); } }
 .middle_content {
   padding-top: 50px;
   padding-bottom: 90px; }
@@ -2563,14 +2571,23 @@ table {
 a:hover {
   cursor: pointer; }
 
+section {
+  text-align: center; }
+
+html, body {
+  min-height: 100%;
+  position: relative; }
+  html .wrapper, body .wrapper {
+    height: 100%; }
+
 .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   text-align: left;
   background-color: #3f3f3f;
   color: #ffffff; }
-  .footer .fb-comments, .footer .fb-comments iframe[style], .footer .fb-comments span {
-    width: 100% !important; }
-  .footer .fb-page, .footer .fb-page iframe[style], .footer .fb-page span {
-    width: 100% !important; }
   .footer-menu {
     padding-top: 65px; }
   .footer-col {
@@ -2621,9 +2638,6 @@ a:hover {
   .service-text {
     font-size: 15px; }
 
-section {
-  text-align: center; }
-
 .employees {
   background: url("../img/employee-bg.jpg") no-repeat center center/cover;
   color: #5e5e5e;
@@ -2667,7 +2681,6 @@ section {
       text-align: left;
       padding: 0; } }
 .news {
-  color: #5d5d5d;
   font-size: 12px;
   text-align: center;
   padding: 60px 0; }
@@ -2675,7 +2688,7 @@ section {
     position: relative;
     max-width: 230px;
     margin: 0 auto;
-    border-bottom: 3px solid #fabd0a; }
+    border-bottom: 5px solid #fabd0a; }
     .news-block:hover .news-details {
       top: 0; }
   .news-image {
@@ -2686,8 +2699,9 @@ section {
     background-color: #eaeaea;
     padding: 15px; }
   .news-image-title {
+    color: #5d5d5d;
     margin-bottom: 2px; }
-  .news-image-section {
+  .news-image-text {
     margin-bottom: 0;
     color: #0099ff;
     font-size: 10px;
@@ -2695,11 +2709,11 @@ section {
   .news-details {
     position: absolute;
     text-align: left;
-    top: 75%;
+    top: 76%;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     transition: all 0.5s ease; }
     .news-details-title, .news-details-text, .news-details-link {
       padding: 18px; }
@@ -2708,7 +2722,7 @@ section {
       background-color: #eaeaea; }
     .news-details-text {
       font-size: 15px;
-      color: #fff;
+      color: #ffffff;
       height: 140px;
       overflow: hidden; }
     .news-details-btn {
@@ -2721,11 +2735,11 @@ section {
       .news-details-btn:hover {
         color: #ffffff; }
   .news .owl-prev, .news .owl-next {
+    display: none !important;
     position: absolute;
     top: 0;
     width: 60px;
-    height: 100%;
-    content: none !important;
+    height: 85%;
     transition: all 0.6s ease; }
     .news .owl-prev:after, .news .owl-next:after {
       content: '';
@@ -2772,9 +2786,9 @@ section {
     background-color: #0099ff;
     text-decoration: none; }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .owl-prev, .owl-next {
-    visibility: hidden; } }
+    display: block; } }
 .representative_container .representative_content {
   margin-top: 40px; }
 .representative_container p {
