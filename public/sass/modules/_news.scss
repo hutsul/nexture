@@ -1,5 +1,4 @@
 .news {
-	color:#5d5d5d;
 	font-size: 12px;
 	text-align: center;
 	padding: 60px 0;
@@ -8,7 +7,7 @@
 		position: relative;
 		max-width:230px;
 		margin: 0 auto;
-		border-bottom: 3px solid $tabsLinkActive;
+		border-bottom: 5px solid $newsBorderColor;
 		&:hover {
 			.news-details {
 				top: 0;
@@ -21,26 +20,27 @@
 	&-image-caption {
 		text-align: left;
 		font-size: 12px;
-		background-color: $employeesImgCaptionBg;
+		background-color: $newsImgCaptionBg;
 		padding: 15px;
 	}
 	&-image-title {
+		color: $newsImageTitleColor;
 		margin-bottom: 2px;
 	}
-	&-image-section {
+	&-image-text {
 		margin-bottom: 0;
-		color:  #0099ff;
+		color:  $newsImageTextColor;
 		font-size: 10px;
 		text-decoration: none;
 	}
 	&-details {
 		position: absolute;
 		text-align: left;
-		top: 75%;
+		top: 76%;
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-color: rgba(0,0,0,0.3);
+		background-color: $newsDetailsBg;
 		transition:all 0.5s ease;
 
 		&-title, &-text, &-link {
@@ -49,33 +49,33 @@
 
 		&-title {
 			font-size: 16px;
-			background-color: #eaeaea;
+			background-color: $newsDetailsTitle;
 		}
 		&-text {
 			font-size: 15px;
-			color: #fff;
+			color: $newsDetailsText;
 			height: 140px;
 			overflow: hidden;
 		}
 		&-btn {
 			padding: 10px 15px;
-			background-color: $yellow1;
-			color: $white;
+			background-color: $newsDetailsBtnBg;
+			color: $newsDetailsBtnColor;
 			text-decoration: none;
 			margin-left: 20px;
 			font-size: 12px;
 
 			&:hover {
-				color: $white;
+				color: $newsDetailsBtnColor;
 			}
 		}
 	}
 	.owl-prev, .owl-next {
+		display: none !important;
 		position: absolute;
 		top: 0;
 		width: 60px;
-		height: 100%;
-		content:none !important;
+		height: 85%;
 		transition: all 0.6s ease;
 		&:after {
 			content: '';
@@ -112,14 +112,14 @@
 		display: inline-block;
 		width: 15px;
 		height: 15px;
-		border:2px solid $grey2;
+		border:2px solid $owlDotBorder;
 		border-radius:50%;
 		margin-right: 10px;
 		&:last-child {
 			margin-right: 0;
 		}
 		&.active {
-			background-color: $grey2;
+			background-color: $owlDotBg;
 		}
 	}
 	.btn-view-all {
@@ -129,13 +129,13 @@
 		line-height: 44px;
 		font-size: 22px;
 		padding: 0 50px;
-		color:$white;
-		background-color: $blue1;
+		color:$newsViewBtnColor;
+		background-color: $newsViewBtnBg;
 		text-decoration: none;
 	}
 }
-@media screen and (max-width: $smallScreen) {
+@media screen and (min-width: $smallScreen) {
 	.owl-prev, .owl-next {
-		visibility: hidden;
+		display: block;
 	}
 }
