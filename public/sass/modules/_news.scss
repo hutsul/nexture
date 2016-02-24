@@ -41,7 +41,7 @@
 		bottom: 0;
 		left: 0;
 		background-color: $newsDetailsBg;
-		transition:all 0.5s ease;
+		@include transition(all 0.5s ease);
 
 		&-title, &-text, &-link {
 			padding: 18px;
@@ -71,19 +71,19 @@
 		}
 	}
 	.owl-prev, .owl-next {
-		display: none !important;
+		display: block;
 		position: absolute;
 		top: 0;
 		width: 60px;
 		height: 85%;
-		transition: all 0.6s ease;
+		@include transition(all 0.6s ease);
 		&:after {
 			content: '';
 			width: 36px;
 			height: 36px;
 			position: absolute;
 			top: 50%;
-			transform: translateY(-50%);
+			@include transform(translateY(-50%));
 			background-image: url('../img/circle-arrows.png');
 			background-repeat: no-repeat;
 		}
@@ -134,8 +134,8 @@
 		text-decoration: none;
 	}
 }
-@media screen and (min-width: $smallScreen) {
+@media screen and (max-width: $smallScreen) {
 	.owl-prev, .owl-next {
-		display: block;
+		display: none !important;
 	}
 }
