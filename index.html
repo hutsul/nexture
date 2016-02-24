@@ -398,19 +398,21 @@
         <!--<script type="text/javascript" src="./public/js/libs/owl.carousel.min.js"></script>-->
         <script type="text/javascript" src="./public/js/main.js"></script>
         <script>
-            if (window.innerWidth <= 767) {
+
                 $("#accordion li > span").click(function(){
-                    $('span').removeClass('active');
-                    $(this).addClass('active');
-                    if(!$(this).next().is(':visible')) {
-                        $('#accordion ul').slideUp(300);
+                    if ($(window).width() <= 767) {
+                        $('span').removeClass('active');
+                        $(this).addClass('active');
+                        if (!$(this).next().is(':visible')) {
+                            $('#accordion ul').slideUp(300);
+                        }
+                        $(this).next().slideToggle(300);
                     }
-                    $(this).next().slideToggle(300);
                 });
 
                 $('#accordion .sub_menu:eq(0)').show();
                 $('#accordion  li > span:eq(0)').addClass('active');
-            }
+
 
         </script>
     </body>

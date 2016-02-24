@@ -43,13 +43,13 @@
       position: relative;
     }
     span {
+      display: block;
       color: $white;
       background: none !important;
       padding: 5px;
       border-bottom: 1px solid transparent;
       cursor: pointer;
       font-size: 16px;
-      display: inline-block;
       margin-bottom: 15px;
       &:hover {
         color: $navLinkActive;
@@ -286,6 +286,7 @@
       background: none;
       padding: 0;
       span {
+        display: inline-block;
         font-size: 14px;
         margin-bottom: 0;
       }
@@ -295,15 +296,20 @@
     li + li {
       margin-left: 5px;
     }
-    & > li:hover {
-      .sub_menu {
-        opacity: 1;
-        &:before {
-          left: 0 !important;
-          right: 0 !important;
+    & > li {
+      overflow: hidden;
+      &:hover {
+        overflow: visible;
+        .sub_menu {
+          opacity: 1;
+          &:before {
+            left: 0 !important;
+            right: 0 !important;
+          }
         }
       }
     }
+
   }
   .header_slider {
     .item {
