@@ -50,6 +50,7 @@ $blue3:            #3b5998;
 $blue4:            #4099ff;
 $blue5:            #0c3d5d;
 $blue6:            #093450;
+$blue7:            #09f;
 
 //green
 $green1:           #7cba27;
@@ -103,6 +104,22 @@ $employeesTextColorExtra:   	$green1;
 
 $sectionTitleColor:            $blue1;
 
+//buttons
+
+$btnSubmit: $blue7;
+
+//links
+
+$linksColor: $blue7;
+
+//form
+$inputBorder: $grey3;
+$inputColor: $grey2;
+
+$inputLoginBorder: $blue7;
+$inputLoginColor: $grey4;
+
+$checkboxBorder: $grey3;
 
 //navbar-nav
 $navLinkActive: $blue1;

@@ -2245,6 +2245,65 @@ h6 {
 /**
   * General
   */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff; }
+  .btn:hover {
+    text-decoration: none;
+    color: #ffffff; }
+  .btn.submit {
+    background: #09f;
+    border-color: #09f; }
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  height: 30px;
+  border: 1px solid #b7b7b7;
+  color: #5e5e5e;
+  padding: 10px 15px;
+  outline: none;
+  border-radius: 4px;
+  font-size: 13px;
+  width: 100%; }
+  input[type="text"].login_input,
+  input[type="password"].login_input,
+  input[type="number"].login_input {
+    height: 55px;
+    background-color: white;
+    border: 1px solid #09f;
+    font-size: 20px;
+    color: #474747; }
+
+label {
+  cursor: pointer; }
+
+.custom_checkbox {
+  position: relative; }
+  .custom_checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0; }
+  .custom_checkbox label {
+    position: relative;
+    padding-right: 38px; }
+    .custom_checkbox label:before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: 0;
+      margin-top: -12px;
+      width: 23px;
+      height: 23px;
+      border: 1px solid #b7b7b7;
+      border-radius: 4px; }
+  .custom_checkbox.left_position label {
+    padding-right: 0;
+    padding-left: 38px; }
+    .custom_checkbox.left_position label:before {
+      right: 100%;
+      margin-right: -23px; }
+
 .table-scroll {
   overflow-x: scroll; }
 
@@ -2932,6 +2991,28 @@ html, body {
   .coporate_profile_container .location_inner {
     max-width: 280px;
     text-align: left; } }
+.login_container {
+  width: 100%;
+  margin: 15px auto 0; }
+  .login_container .login_list {
+    margin-bottom: 20px; }
+    .login_container .login_list > label {
+      font-size: 16px; }
+    .login_container .login_list > input {
+      margin-top: 15px; }
+    .login_container .login_list a {
+      color: #09f; }
+    .login_container .login_list.lost_pasword {
+      text-align: center;
+      margin-top: 10px; }
+      .login_container .login_list.lost_pasword a {
+        font-size: 16px; }
+
+@media screen and (min-width: 768px) {
+  .login_container {
+    width: 415px;
+    padding: 30px 50px 20px;
+    box-shadow: 2.5px 4.3px 13px rgba(0, 0, 0, 0.37); } }
 /**
   * States
   */

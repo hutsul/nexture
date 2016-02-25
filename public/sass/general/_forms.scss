@@ -1,1 +1,55 @@
 // Form elements style
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  height: 30px;
+  border: 1px solid $inputBorder;
+  color: $inputColor;
+  padding: 10px 15px;
+  outline: none;
+  border-radius: 4px;
+  font-size: 13px;
+  width: 100%;
+  &.login_input {
+    height: 55px;
+    background-color: white;
+    border: 1px solid $inputLoginBorder;
+    font-size: 20px;
+    color: #474747;
+  }
+}
+label {
+  cursor: pointer;
+}
+.custom_checkbox {
+  position: relative;
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+  }
+  label {
+    position: relative;
+    padding-right: 38px;
+    &:before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: 0;
+      margin-top: -12px;
+      width: 23px;
+      height: 23px;
+      border: 1px solid $checkboxBorder;
+      border-radius: 4px;
+    }
+  }
+  &.left_position {
+    label {
+      padding-right: 0;
+      padding-left: 38px;
+      &:before {
+        right: 100%;
+        margin-right: -23px;
+      }
+    }
+  }
+}

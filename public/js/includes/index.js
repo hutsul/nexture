@@ -48,3 +48,28 @@ $(document).ready(function(){
     });
 });
 
+$("#accordion li > span").click(function(){
+    if ($(window).width() <= 767) {
+        $('span').removeClass('active');
+        $(this).addClass('active');
+        if (!$(this).next().is(':visible')) {
+            $('#accordion ul').slideUp(300);
+        }
+        $(this).next().slideToggle(300);
+    }
+});
+$(window).resize(function() {
+    var screenwidth = $(document).width();
+    if (screenwidth <= 767) {
+        $('#accordion li > span').next().hide();
+    }
+});
+
+$('#accordion .sub_menu:eq(0)').show();
+$('#accordion  li > span:eq(0)').addClass('active');
+
+$("#accordion li > span").hover(function(){
+    if ($(window).width() >= 768) {
+        $('#accordion li > span').next().show();
+    }
+});
