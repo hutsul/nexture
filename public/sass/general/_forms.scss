@@ -18,14 +18,62 @@ input[type="number"] {
     color: #474747;
   }
 }
+.choose_file {
+  position: relative;
+  margin-bottom: 15px;
+  input[type="file"] {
+    display: none;
+  }
+  label {
+    width: 145px;
+    height: 28px;
+    border: 1px solid $inputTypeBorder;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 13px;
+    color: $inputTypeColor;
+    line-height: 28px;
+    &:hover {
+      background: $inputTypeHover;
+      color: $white; 
+    }
+  }
+  .file_status {
+    display: block;
+    text-align: center;
+  }
+}
+textarea {
+  border: 1px solid $inputBorder;
+  border-radius: 2px;
+  padding: 20px;
+  text-align: left;
+}
 label {
   cursor: pointer;
+}
+select {
+  width: 145px;
+  height: 28px;
+  border: 1px solid $inputBorder;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  padding-left: 15px;
+  outline: none;
+  option {
+    cursor: pointer;
+  }
 }
 .custom_checkbox {
   position: relative;
   input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
+    display: none;
+    &:checked + label {
+      &:before {
+        content: url("../img/check_dark.png");
+      }
+    }
   }
   label {
     position: relative;
@@ -40,9 +88,18 @@ label {
       height: 23px;
       border: 1px solid $checkboxBorder;
       border-radius: 4px;
+      text-align: center;
+      line-height: 23px
     }
   }
   &.left_position {
+    input[type="checkbox"] {
+      &:checked + label {
+        &:before {
+          content: url("../img/check_blue.png");
+        }
+      }
+    }
     label {
       padding-right: 0;
       padding-left: 38px;
