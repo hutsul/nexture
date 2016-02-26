@@ -1,0 +1,114 @@
+.bulletin_form {
+  .bulletin_list {
+    padding: 20px 0;
+    border-bottom: 1px solid $inputBorder;
+    text-align: center;
+    textarea {
+      min-height: 135px;
+      width: 100%;
+      outline: none;
+      resize: none;
+    }
+    .inner_element {
+      display: block;
+    }
+    .inner_title {
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+    .inner_list {
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+      margin-bottom: 15px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .btns_container {
+    padding-top: 35px;
+    .btn.back_btn {
+      float: left;
+    }
+    .btn {
+      float: right;
+    }
+  }
+}
+.tab_gallery {
+  .tab_gallery_img {
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+    }
+  }
+  .top_box {
+    border-bottom: 1px solid $topBox_border;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+   li {
+     display: inline-block;
+     vertical-align: middle;
+     margin-right: 10px;
+     margin-bottom: 5px;
+     span {
+       font-size: 13px;
+       margin-left: 15px;
+     }
+     i {
+       color: $topBoxIcon;
+     }
+   }
+  }
+  .gallery_main_title {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  .gallery_sub_title {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .gallery_content {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: $smallScreen) {
+  .bulletin_form {
+    .bulletin_list {
+      text-align: left;
+      .inner_title {
+        padding-right: 20px;
+        padding-top: 5px;
+      }
+      .inner_element {
+        display: table-cell;
+        vertical-align: middle;
+        &.vertical_top {
+          vertical-align: top;
+        }
+      }
+      .inner_list {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 55px;
+        width: auto;
+        margin-bottom: 0;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .tab_gallery {
+    .top_box {
+      li {
+        margin-right: 0;
+      }
+      li + li {
+        margin-left: 45px;
+      }
+    }
+  }
+}

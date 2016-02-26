@@ -3,12 +3,21 @@
   display: inline-block;
   text-decoration: none;
   color: $white;
-  &:hover {
+  text-decoration: none;
+  outline: none;
+  &:hover,
+  &:focus {
     text-decoration: none;
     color: $white;
   }
   &.submit {
     background: $btnSubmit;
     border-color: $inputLoginBorder;
+    border-radius: 6px;
+    padding: 8px 25px;
+    outline: none;
+    &:hover {
+      background: $btnSubmitHover;
+    }
   }
 }

@@ -1,9 +1,6 @@
 // Tables style
 
-.table-scroll {
-	overflow-x: scroll;
-}
-table {
+.custom_table {
 	width: 100%;
 	min-width: 768px;
 	text-align: left;
@@ -38,3 +35,8 @@ table {
 	}
 }
 
+@media screen and (max-width: $smallScreen) {
+	.table-scroll {
+		overflow-x: scroll;
+	}
+}

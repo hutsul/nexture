@@ -1,0 +1,60 @@
+.bullet_board {
+  .bullet_board_table {
+    margin-top: 30px;
+    min-width: 750px;
+    tr:nth-child(2n) {
+      background-color: $trBgList;
+    }
+    td, th {
+      text-align: center;
+      vertical-align: middle;
+      border-bottom: 1px solid $trBorder;
+    }
+    th {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    td {
+      padding: 20px 20px;
+      font-size: 18px;
+    }
+    .title {
+      width: 500px;
+      text-align: left;
+    }
+    .number {
+      width: 100px;
+    }
+  }
+  .add_new {
+    margin-top: 20px;
+  }
+}
+.search_box {
+  text-align: center;
+  select, input {
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: $smallScreen) {
+  .bullet_board {
+    .search_box {
+      text-align: left;
+      select, input {
+        margin-right: 10px;
+      }
+      select {
+        width: 80px;
+      }
+      input {
+        width: 155px;
+      }
+    }
+    .add_new {
+      float: right;
+      margin-top: 0;
+    }
+  }
+}

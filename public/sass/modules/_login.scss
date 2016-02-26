@@ -19,6 +19,13 @@
         font-size: 16px;
       }
     }
+    .custom_checkbox {
+      label {
+        &:before {
+          border-color: $inputLoginBorder;
+        }
+      }
+    }
   }
 }
 
