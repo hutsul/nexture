@@ -1,32 +1,8 @@
 .faces {
-
-	&-block {
-		position: relative;
-		max-width: 320px;
-		margin: 0 auto 40px;
-		img {
-			width: 100%;
-		}
+	.item-block {
+		margin-top: 25px;
 	}
-
-	&-image-caption {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		left: 0;
-		text-align: left;
-		font-size: 12px;
-		background-color: $employeesImgCaptionBg;
-		padding: 10px 15px;
+	.item-details {
+		top: 78%;
 	}
-	&-image-title {
-		margin-bottom: 10px;
-	}
-	&-image-section {
-		margin-bottom: 0;
-		color:  #0099ff;
-		font-size: 10px;
-		text-decoration: none;
-	}
-
 }
