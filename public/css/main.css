@@ -2795,34 +2795,34 @@ html, body {
     .employees-block {
       text-align: left;
       padding: 0; } }
-.news {
+.news, .news-block {
   font-size: 12px;
   text-align: center;
   padding: 60px 0; }
-  .news .owl-prev {
+  .news .owl-prev, .news-block .owl-prev {
     left: -36px; }
-    .news .owl-prev:after {
+    .news .owl-prev:after, .news-block .owl-prev:after {
       left: 0;
       background-position: 0 0; }
-  .news .owl-next {
+  .news .owl-next, .news-block .owl-next {
     right: -36px; }
-    .news .owl-next:after {
+    .news .owl-next:after, .news-block .owl-next:after {
       right: 0;
       background-position: -2px -36px; }
-  .news .owl-dots {
+  .news .owl-dots, .news-block .owl-dots {
     padding-top: 30px; }
-  .news .owl-dot {
+  .news .owl-dot, .news-block .owl-dot {
     display: inline-block;
     width: 15px;
     height: 15px;
     border: 2px solid #5e5e5e;
     border-radius: 50%;
     margin-right: 10px; }
-    .news .owl-dot:last-child {
+    .news .owl-dot:last-child, .news-block .owl-dot:last-child {
       margin-right: 0; }
-    .news .owl-dot.active {
+    .news .owl-dot.active, .news-block .owl-dot.active {
       background-color: #5e5e5e; }
-  .news .btn-view-all {
+  .news .btn-view-all, .news-block .btn-view-all {
     margin-top: 50px;
     display: inline-block;
     height: 44px;
@@ -2832,6 +2832,9 @@ html, body {
     color: #ffffff;
     background-color: #0099ff;
     text-decoration: none; }
+
+.news-block .item-block {
+  margin-top: 25px; }
 
 .item-block {
   position: relative;
