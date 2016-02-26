@@ -1,4 +1,4 @@
-.bulletin {
+.bulletin_form {
   .bulletin_list {
     padding: 20px 0;
     border-bottom: 1px solid $inputBorder;
@@ -37,12 +37,21 @@
   }
 }
 .tab_gallery {
+  .tab_gallery_img {
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+    }
+  }
   .top_box {
     border-bottom: 1px solid $topBox_border;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
    li {
      display: inline-block;
      vertical-align: middle;
+     margin-right: 10px;
+     margin-bottom: 5px;
      span {
        font-size: 13px;
        margin-left: 15px;
@@ -51,14 +60,22 @@
        color: $topBoxIcon;
      }
    }
-    li + li {
-      margin-left: 45px;
-    }
+  }
+  .gallery_main_title {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  .gallery_sub_title {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .gallery_content {
+    font-size: 25px;
   }
 }
 
 @media screen and (min-width: $smallScreen) {
-  .bulletin {
+  .bulletin_form {
     .bulletin_list {
       text-align: left;
       .inner_title {
@@ -81,6 +98,16 @@
         &:last-child {
           margin-right: 0;
         }
+      }
+    }
+  }
+  .tab_gallery {
+    .top_box {
+      li {
+        margin-right: 0;
+      }
+      li + li {
+        margin-left: 45px;
       }
     }
   }

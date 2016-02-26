@@ -4,7 +4,9 @@
   text-decoration: none;
   color: $white;
   text-decoration: none;
-  &:hover {
+  outline: none;
+  &:hover,
+  &:focus {
     text-decoration: none;
     color: $white;
   }
@@ -13,6 +15,7 @@
     border-color: $inputLoginBorder;
     border-radius: 6px;
     padding: 8px 25px;
+    outline: none;
     &:hover {
       background: $btnSubmitHover;
     }

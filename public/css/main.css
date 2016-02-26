@@ -2249,15 +2249,17 @@ h6 {
   display: inline-block;
   text-decoration: none;
   color: #ffffff;
-  text-decoration: none; }
-  .btn:hover {
+  text-decoration: none;
+  outline: none; }
+  .btn:hover, .btn:focus {
     text-decoration: none;
     color: #ffffff; }
   .btn.submit {
     background: #09f;
     border-color: #09f;
     border-radius: 6px;
-    padding: 8px 25px; }
+    padding: 8px 25px;
+    outline: none; }
     .btn.submit:hover {
       background: #4099ff; }
 
@@ -2353,34 +2355,34 @@ select {
       right: 100%;
       margin-right: -23px; }
 
-.table-scroll {
-  overflow-x: scroll; }
-
-table {
+.custom_table {
   width: 100%;
   min-width: 768px;
   text-align: left;
   border: 1px solid #b7b7b7; }
-  table tr {
+  .custom_table tr {
     border-bottom: 1px solid #b7b7b7; }
-    table tr:last-child {
+    .custom_table tr:last-child {
       border-bottom: none; }
-  table td {
+  .custom_table td {
     padding: 26px;
     border-right: 1px solid #b7b7b7;
     color: #5e5e5e;
     font-size: 16px; }
-    table td:first-child {
+    .custom_table td:first-child {
       background-color: #f0f0f0;
       color: #474747;
       font-size: 16px; }
-    table td:last-child {
+    .custom_table td:last-child {
       border-right: none; }
-  table span, table li {
+  .custom_table span, .custom_table li {
     line-height: 30px; }
-  table ol {
+  .custom_table ol {
     padding-left: 15px; }
 
+@media screen and (max-width: 768px) {
+  .table-scroll {
+    overflow-x: scroll; } }
 /**
   * Modules
   */
@@ -3073,67 +3075,127 @@ html, body {
     width: 415px;
     padding: 30px 50px 20px;
     box-shadow: 2.5px 4.3px 13px rgba(0, 0, 0, 0.37); } }
-.bulletin .bulletin_list {
+.bulletin_form .bulletin_list {
   padding: 20px 0;
   border-bottom: 1px solid #b7b7b7;
   text-align: center; }
-  .bulletin .bulletin_list textarea {
+  .bulletin_form .bulletin_list textarea {
     min-height: 135px;
     width: 100%;
     outline: none;
     resize: none; }
-  .bulletin .bulletin_list .inner_element {
+  .bulletin_form .bulletin_list .inner_element {
     display: block; }
-  .bulletin .bulletin_list .inner_title {
+  .bulletin_form .bulletin_list .inner_title {
     margin-bottom: 15px;
     font-size: 16px; }
-  .bulletin .bulletin_list .inner_list {
+  .bulletin_form .bulletin_list .inner_list {
     display: inline-block;
     vertical-align: middle;
     width: 100%;
     margin-bottom: 15px; }
-    .bulletin .bulletin_list .inner_list:last-child {
+    .bulletin_form .bulletin_list .inner_list:last-child {
       margin-right: 0; }
-.bulletin .btns_container {
+.bulletin_form .btns_container {
   padding-top: 35px; }
-  .bulletin .btns_container .btn.back_btn {
+  .bulletin_form .btns_container .btn.back_btn {
     float: left; }
-  .bulletin .btns_container .btn {
+  .bulletin_form .btns_container .btn {
     float: right; }
 
+.tab_gallery .tab_gallery_img {
+  margin-bottom: 20px; }
+  .tab_gallery .tab_gallery_img img {
+    width: 100%; }
 .tab_gallery .top_box {
   border-bottom: 1px solid #fabd0a;
-  padding-bottom: 20px; }
+  padding-bottom: 15px;
+  margin-bottom: 40px; }
   .tab_gallery .top_box li {
     display: inline-block;
-    vertical-align: middle; }
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-bottom: 5px; }
     .tab_gallery .top_box li span {
       font-size: 13px;
       margin-left: 15px; }
     .tab_gallery .top_box li i {
       color: #fabd0a; }
-  .tab_gallery .top_box li + li {
-    margin-left: 45px; }
+.tab_gallery .gallery_main_title {
+  font-size: 30px;
+  margin-bottom: 25px; }
+.tab_gallery .gallery_sub_title {
+  font-size: 18px;
+  margin-bottom: 30px; }
+.tab_gallery .gallery_content {
+  font-size: 25px; }
 
 @media screen and (min-width: 768px) {
-  .bulletin .bulletin_list {
+  .bulletin_form .bulletin_list {
     text-align: left; }
-    .bulletin .bulletin_list .inner_title {
+    .bulletin_form .bulletin_list .inner_title {
       padding-right: 20px;
       padding-top: 5px; }
-    .bulletin .bulletin_list .inner_element {
+    .bulletin_form .bulletin_list .inner_element {
       display: table-cell;
       vertical-align: middle; }
-      .bulletin .bulletin_list .inner_element.vertical_top {
+      .bulletin_form .bulletin_list .inner_element.vertical_top {
         vertical-align: top; }
-    .bulletin .bulletin_list .inner_list {
+    .bulletin_form .bulletin_list .inner_list {
       display: inline-block;
       vertical-align: middle;
       margin-right: 55px;
       width: auto;
       margin-bottom: 0; }
-      .bulletin .bulletin_list .inner_list:last-child {
-        margin-right: 0; } }
+      .bulletin_form .bulletin_list .inner_list:last-child {
+        margin-right: 0; }
+
+  .tab_gallery .top_box li {
+    margin-right: 0; }
+  .tab_gallery .top_box li + li {
+    margin-left: 45px; } }
+.bullet_board .bullet_board_table {
+  margin-top: 30px;
+  min-width: 750px; }
+  .bullet_board .bullet_board_table tr:nth-child(2n) {
+    background-color: #ebebeb; }
+  .bullet_board .bullet_board_table td, .bullet_board .bullet_board_table th {
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #b7b7b7; }
+  .bullet_board .bullet_board_table th {
+    padding: 10px 20px;
+    font-size: 16px; }
+  .bullet_board .bullet_board_table td {
+    padding: 20px 20px;
+    font-size: 18px; }
+  .bullet_board .bullet_board_table .title {
+    width: 500px;
+    text-align: left; }
+  .bullet_board .bullet_board_table .number {
+    width: 100px; }
+.bullet_board .add_new {
+  margin-top: 20px; }
+
+.search_box {
+  text-align: center; }
+  .search_box select, .search_box input {
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%; }
+
+@media screen and (min-width: 768px) {
+  .bullet_board .search_box {
+    text-align: left; }
+    .bullet_board .search_box select, .bullet_board .search_box input {
+      margin-right: 10px; }
+    .bullet_board .search_box select {
+      width: 80px; }
+    .bullet_board .search_box input {
+      width: 155px; }
+  .bullet_board .add_new {
+    float: right;
+    margin-top: 0; } }
 /**
   * States
   */
