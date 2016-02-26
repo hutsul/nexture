@@ -4,8 +4,14 @@
   padding-top: 50px;
   padding-bottom: 90px;
 }
-a:hover {
-  cursor: pointer;
+
+a {
+  &:hover {
+    cursor: pointer;
+  }
+  &.link {
+    color: $linksColor;
+  }
 }
 section {
   text-align: center;
