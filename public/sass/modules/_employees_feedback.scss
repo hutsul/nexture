@@ -1,0 +1,40 @@
+.employees_feedback_container {
+  .post {
+    margin-bottom: 30px;
+    .worker_name,
+    .post_time {
+      display: block;
+      width: 100%;
+      p {
+        font-size: 18px;
+      }
+      .main_name {
+        font-size: 24px;
+        color: $nameColor;
+      }
+    }
+  }
+  .employ_feedback_b_content {
+    margin-top: 40px;
+    p {
+      font-size: 19px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: $smallScreen) {
+  .employees_feedback_container {
+    .post {
+      .worker_name,
+      .post_time {
+        display: inline-block;
+        vertical-align: bottom;
+        width: 49%;
+      }
+      .post_time {
+        text-align: right;
+      }
+    }
+  }
+}

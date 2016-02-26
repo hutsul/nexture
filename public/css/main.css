@@ -2204,7 +2204,8 @@ h2.section-title {
   margin-bottom: 40px; }
   h2.section-title span {
     border-bottom: 1px solid #0099ff;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    display: inline-block; }
 
 h1 {
   font-size: 36px;
@@ -2383,6 +2384,40 @@ select {
 @media screen and (max-width: 768px) {
   .table-scroll {
     overflow-x: scroll; } }
+ul.nav-tabs {
+  width: 100%;
+  display: table; }
+  ul.nav-tabs li {
+    display: block;
+    float: none;
+    text-align: center; }
+  ul.nav-tabs li.active a {
+    color: #fabd0a;
+    border-bottom: 4px solid #fabd0a;
+    background: none; }
+    ul.nav-tabs li.active a:hover, ul.nav-tabs li.active a:focus {
+      color: #fabd0a;
+      border-bottom: 4px solid #fabd0a;
+      background: none; }
+  ul.nav-tabs a {
+    border-right: none !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: 4px solid #adadad;
+    color: #adadad;
+    margin-right: 0;
+    padding: 15px 0; }
+    ul.nav-tabs a:focus, ul.nav-tabs a:hover {
+      color: #fabd0a;
+      border-bottom: 4px solid #fabd0a;
+      background: none; }
+
+.tab-content {
+  padding-top: 50px; }
+
+@media screen and (min-width: 768px) {
+  ul.nav-tabs li {
+    display: table-cell; } }
 /**
   * Modules
   */
@@ -2954,32 +2989,6 @@ html, body {
 .faces .item-details {
   top: 78%; }
 
-.security_policy_container ul.nav-tabs {
-  width: 100%;
-  display: table; }
-  .security_policy_container ul.nav-tabs li {
-    display: block;
-    float: none;
-    text-align: center; }
-  .security_policy_container ul.nav-tabs li.active a {
-    color: #fabd0a;
-    border-bottom: 4px solid #fabd0a;
-    background: none; }
-  .security_policy_container ul.nav-tabs a {
-    border-right: none !important;
-    border-left: none !important;
-    border-top: none !important;
-    border-bottom: 4px solid #adadad;
-    color: #adadad;
-    margin-right: 0;
-    padding: 15px 0; }
-    .security_policy_container ul.nav-tabs a:focus, .security_policy_container ul.nav-tabs a:hover {
-      color: #fabd0a;
-      border-bottom: 4px solid #fabd0a;
-      background: none; }
-.security_policy_container .tab-content {
-  padding-top: 50px; }
-
 .security_policy_content ul {
   padding-left: 0; }
   .security_policy_content ul li {
@@ -2992,9 +3001,6 @@ html, body {
   .security_policy_content p span.row_title {
     font-weight: bold; }
 
-@media screen and (min-width: 768px) {
-  .security_policy_container ul.nav-tabs li {
-    display: table-cell; } }
 .coporate_profile_container {
   display: table;
   width: 100%; }
@@ -3097,7 +3103,8 @@ html, body {
 .tab_gallery .top_box {
   border-bottom: 1px solid #fabd0a;
   padding-bottom: 15px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  padding-left: 0; }
   .tab_gallery .top_box li {
     display: inline-block;
     vertical-align: middle;
@@ -3183,6 +3190,33 @@ html, body {
   .bullet_board .add_new {
     float: right;
     margin-top: 0; } }
+.employees_feedback_container .post {
+  margin-bottom: 30px; }
+  .employees_feedback_container .post .worker_name,
+  .employees_feedback_container .post .post_time {
+    display: block;
+    width: 100%; }
+    .employees_feedback_container .post .worker_name p,
+    .employees_feedback_container .post .post_time p {
+      font-size: 18px; }
+    .employees_feedback_container .post .worker_name .main_name,
+    .employees_feedback_container .post .post_time .main_name {
+      font-size: 24px;
+      color: #fbca3b; }
+.employees_feedback_container .employ_feedback_b_content {
+  margin-top: 40px; }
+  .employees_feedback_container .employ_feedback_b_content p {
+    font-size: 19px;
+    margin-bottom: 30px; }
+
+@media screen and (min-width: 768px) {
+  .employees_feedback_container .post .worker_name,
+  .employees_feedback_container .post .post_time {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 49%; }
+  .employees_feedback_container .post .post_time {
+    text-align: right; } }
 /**
   * States
   */
