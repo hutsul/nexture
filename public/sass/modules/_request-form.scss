@@ -25,7 +25,7 @@
 		position: relative;
 		padding-bottom: 30px;
 
-		&.error { 
+		&.error {
 			input {
 				border:1px solid #ff4e4e;
 			}
@@ -82,14 +82,15 @@
 }
 
 @media screen and (min-width: $smallScreen) {
+	.request-form {
+		.form-block {
+			padding: 45px 60px;
+		}
+		.phone-input {
 
-	.form-block {
-		padding: 45px 60px;
-	}
-	.phone-input {
-
-		input {
-			width: 124px !important;
+			input {
+				width: 124px;
+			}
 		}
 	}
 }
