@@ -1,0 +1,40 @@
+.main_chart {
+  .pie {
+    &:after {
+      content: none;
+    }
+  }
+  .legend {
+    box-shadow: none;
+    li {
+      margin-bottom: 30px;
+      width: auto;
+      height: auto;
+      text-align: left;
+      border: none;
+    }
+    em, span {
+      font-size: 30px;
+    }
+    em, span, i {
+      display: inline-block;
+      vertical-align: middle;
+      float: none;
+    }
+    span {
+      &:before {
+        content: ':';
+      }
+    }
+    i {
+      width: 35px;
+      height: 35px;
+      border: 3px solid;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 25px;
+      font-size: 20px;
+      margin-right: 25px;
+    }
+  }
+}
