@@ -112,15 +112,15 @@ function createPie(dataElement, pieElement) {
     }
     var offset = 0;
     var color = [
-        "cornflowerblue",
-        "olivedrab",
-        "orange",
-        "tomato",
-        "crimson",
-        "purple",
+        "#39A3EB",
+        "#DC3812",
+        "#F8BB08",
+        "#7AB827",
+        "#990099",
+        "navy",
         "turquoise",
         "forestgreen",
-        "navy",
+        "purple",
         "gray"
     ];
     for(var i=0; i<listData.length; i++) {
