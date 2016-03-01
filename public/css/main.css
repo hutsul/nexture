@@ -2358,7 +2358,7 @@ select {
 
 .custom_table {
   width: 100%;
-  min-width: 750px;
+  min-width: 720px;
   text-align: left;
   border: 1px solid #b7b7b7; }
   .custom_table tr {
@@ -3229,9 +3229,11 @@ html, body {
   vertical-align: top; }
 
 .pie {
-  height: 400px;
-  width: 385px;
-  position: relative; }
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px; }
   .pie:before {
     content: "";
     display: block;
@@ -3284,14 +3286,29 @@ html, body {
   font-style: normal; }
 
 .legend_container .legend_title {
-  font-size: 30px;
-  padding-bottom: 24px;
+  font-size: 20px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #adadad;
-  margin-bottom: 45px; }
+  margin-bottom: 25px; }
 
 .inner_title {
   margin-top: 40px; }
 
+.main_chart .tab-pane {
+  overflow: hidden; }
+
+@media screen and (min-width: 768px) {
+  .pie {
+    transform: scale(1.8);
+    margin-top: 90px; }
+
+  .legend_container .legend_title {
+    font-size: 30px;
+    padding-bottom: 24px;
+    margin-bottom: 45px; }
+
+  .main_chart .tab-pane {
+    padding-bottom: 60px; } }
 .main_chart .pie:after {
   content: none; }
 .main_chart .legend {
@@ -3303,13 +3320,19 @@ html, body {
     text-align: left;
     border: none; }
   .main_chart .legend em, .main_chart .legend span {
-    font-size: 30px; }
+    font-size: 16px; }
   .main_chart .legend em, .main_chart .legend span, .main_chart .legend i {
     display: inline-block;
     vertical-align: middle;
     float: none; }
-  .main_chart .legend span:before {
-    content: ':'; }
+  .main_chart .legend span {
+    font-weight: bold;
+    font-family: Arial; }
+    .main_chart .legend span:before {
+      content: ':';
+      margin-right: 2px; }
+    .main_chart .legend span:after {
+      content: '%'; }
   .main_chart .legend i {
     width: 35px;
     height: 35px;
@@ -3321,6 +3344,9 @@ html, body {
     margin-right: 25px;
     font-style: normal; }
 
+@media screen and (min-width: 768px) {
+  .main_chart .legend em, .main_chart .legend span {
+    font-size: 30px; } }
 /**
   * States
   */

@@ -92,7 +92,7 @@ function addSlice(sliceSize, pieElement, offset, sliceID, color) {
     });
 }
 function iterateSlices(sliceSize, pieElement, offset, dataCount, sliceCount, color) {
-    var sliceID = "s"+dataCount+"-"+sliceCount;
+    var sliceID = "s"+dataCount+"-"+sliceCount+ '-'+ Date.now();
     var maxSize = 179;
     if(sliceSize<=maxSize) {
         addSlice(sliceSize, pieElement, offset, sliceID, color);
@@ -126,10 +126,12 @@ function createPie(dataElement, pieElement) {
     for(var i=0; i<listData.length; i++) {
         var size = sliceSize(listData[i], listTotal);
         iterateSlices(size, pieElement, offset, i, 0, color[i]);
+
         $(dataElement+" li:nth-child("+(i+1)+") i").css("border-color", color[i]);
         offset += size;
     }
 }
+
 createPie(".tab_1 .pieID.legend", ".tab_1 .pieID.pie");
 createPie(".tab_2 .pieID.legend", ".tab_2 .pieID.pie");
 createPie(".tab_3 .pieID.legend", ".tab_3 .pieID.pie");

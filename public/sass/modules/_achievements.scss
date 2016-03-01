@@ -11,9 +11,11 @@
   vertical-align: top;
 }
 .pie {
-  height: 400px;
-  width: 385px;
+  height: 200px;
+  width: 200px;
   position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
   &:before {
     content: "";
     display: block;
@@ -75,13 +77,38 @@
 
 .legend_container {
   .legend_title {
-    font-size: 30px;
-    padding-bottom: 24px;
+    font-size: 20px;
+    padding-bottom: 10px;
     border-bottom: 1px solid $legendTitleBorder;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
   }
 }
 
 .inner_title {
   margin-top: 40px;
+}
+
+.main_chart {
+  .tab-pane {
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: $smallScreen) {
+  .pie {
+    transform: scale(1.8);
+    margin-top: 90px;
+  }
+  .legend_container {
+    .legend_title {
+      font-size: 30px;
+      padding-bottom: 24px;
+      margin-bottom: 45px;
+    }
+  }
+  .main_chart {
+    .tab-pane {
+      padding-bottom: 60px;
+    }
+  }
 }
