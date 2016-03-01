@@ -130,4 +130,7 @@ function createPie(dataElement, pieElement) {
         offset += size;
     }
 }
-createPie(".pieID.legend", ".pieID.pie");
+createPie(".tab_1 .pieID.legend", ".tab_1 .pieID.pie");
+createPie(".tab_2 .pieID.legend", ".tab_2 .pieID.pie");
+createPie(".tab_3 .pieID.legend", ".tab_3 .pieID.pie");
+createPie(".tab_4 .pieID.legend", ".tab_4 .pieID.pie");

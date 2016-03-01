@@ -21,10 +21,11 @@
     z-index: 1;
     width: 100px;
     height: 100px;
-    background: #EEE;
+    background: $white;
     border-radius: 50%;
     top: 50px;
     left: 50px;
+    box-shadow: inset 2.5px 4.3px 13px rgba(0, 0, 0, 0.37);
   }
   &:after {
     content: "";
