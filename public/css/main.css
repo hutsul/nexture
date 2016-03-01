@@ -3297,6 +3297,9 @@ html, body {
 .main_chart .tab-pane {
   overflow: hidden; }
 
+.achievements_tab_list li {
+  width: 300px; }
+
 @media screen and (min-width: 768px) {
   .pie {
     transform: scale(1.8);

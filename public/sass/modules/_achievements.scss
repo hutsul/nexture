@@ -94,6 +94,12 @@
   }
 }
 
+.achievements_tab_list {
+  li {
+    width: 300px;
+  }
+}
+
 @media screen and (min-width: $smallScreen) {
   .pie {
     transform: scale(1.8);
