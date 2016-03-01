@@ -2707,8 +2707,7 @@ ul.nav-tabs {
       display: none; } }
 @media screen and (max-width: 768px) {
   #accordion ul.sub_menu {
-    display: none;
-    box-shadow: inset 0px 0px 30px 10px rgba(0, 0, 0, 0.17); } }
+    display: none; } }
 .middle_content {
   padding-top: 50px;
   padding-bottom: 90px; }
@@ -3217,6 +3216,9 @@ html, body {
     display: inline-block;
     vertical-align: bottom;
     width: 49%; }
+    .employees_feedback_container .post .worker_name p,
+    .employees_feedback_container .post .post_time p {
+      margin-bottom: 10px; }
   .employees_feedback_container .post .post_time {
     text-align: right; } }
 @keyframes bake-pie {
